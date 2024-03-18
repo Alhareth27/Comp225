@@ -1,16 +1,25 @@
 import React from 'react';
-import Quiz from './Quiz'; // Adjust the path as necessary
+import Quiz from './components/Quiz/Quiz'; 
+import Header from "./containers/Header/Header";
+import Apple from "./Apple.png";
+import "./App.css";
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        {/* Other header content */}
+        <Header/>
       </header>
-      <main>
-        <Quiz />
-      </main>
-      {/* Other components or footer */}
+      <div className="App-content">
+        <div className="App-column">
+          <div className='App-column__image'>
+          <img src={Apple} height="400px" width="700px"/>
+          </div>
+        </div>
+        <div className="App-column">
+          <Quiz/>
+        </div>
+      </div>
     </div>
   );
 }
