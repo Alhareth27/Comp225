@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Option from "../Option/Option";
+import { Tooltip } from '/Users/alharethali/Documents/GitHub/Comp225/my-react-app/src/components/Tooltip/Tooltip.js';
 import "./quiz.css";
 
 const questions = [
@@ -59,9 +60,11 @@ const Quiz = () => {
     <div className="quiz-container">
       {!explanationShown ? (
         <div className="question-card">
-          <p className="question">
-            {questions[currentQuestionIndex].question}
-          </p>
+          <Tooltip text={questions[currentQuestionIndex].explanation}>
+            <p className="question">
+              {questions[currentQuestionIndex].question}
+            </p>
+          </Tooltip>
           <div>
             {questions[currentQuestionIndex].options.map((option, index) => (
               <Option
@@ -84,3 +87,4 @@ const Quiz = () => {
 };
 
 export default Quiz;
+

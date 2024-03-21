@@ -9,12 +9,6 @@ import { Tooltip } from '/Users/alharethali/Documents/GitHub/Comp225/my-react-ap
 function App() {
   return (
     <div className="App">   
-    <button> Alert</button>
-    <Tooltip text = {"Press"}>
-    <span class="material-symbols-outlined">
-info
-</span>
-    </Tooltip>
       <header className="App-header">
         <Header/>
       </header>

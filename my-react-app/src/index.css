@@ -6,21 +6,40 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-.tooltip-container{
-  position:relative;
-  display:inline-block;
-}
-.tooltip{
+.tooltip-container {
+  display: inline-block;
+  position: relative;
+  cursor: help;
+
+.tooltip {
   position: absolute;
-  top: calc(-100% -50px);
-  transform: translateX(-50%);
-  background-color: rgba(0,0, 0, 0.8);
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-0%);
+  transform: translateY(20%);
+  background-color: #333;
   color: white;
-  padding: 10px;
+  padding: 5px 10px;
   border-radius: 4px;
-  z-index: 1;
-  min-width: 200px;
+  pointer-events: none;
+  z-index: 1000;
+  max-width: calc(100vw - 20px); 
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s;
+  white-space: normal;
+  text-align: left;
 }
+
+.tooltip-container:hover .tooltip {
+  opacity: 1; 
+  visibility: visible; 
+  bottom: 110%;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
