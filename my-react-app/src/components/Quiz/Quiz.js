@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Option from "../Option/Option";
-import { Tooltip } from '/Users/alharethali/Documents/GitHub/Comp225/my-react-app/src/components/Tooltip/Tooltip.js';
+import { Tooltip } from '../Tooltip/Tooltip';
 import "./quiz.css";
 
 const questions = [

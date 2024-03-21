@@ -1,10 +1,8 @@
 import React from 'react';
 import Quiz from './components/Quiz/Quiz'; 
 import Header from "./containers/Header/Header";
-import Apple from "./Apple.png";
 import "./App.css";
 import StockChart from './components/StockChart/StockChart';
-import { Tooltip } from '/Users/alharethali/Documents/GitHub/Comp225/my-react-app/src/components/Tooltip/Tooltip.js';
 
 function App() {
   return (
