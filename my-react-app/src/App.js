@@ -4,10 +4,17 @@ import Header from "./containers/Header/Header";
 import Apple from "./Apple.png";
 import "./App.css";
 import StockChart from './components/StockChart/StockChart';
+import { Tooltip } from '/Users/alharethali/Documents/GitHub/Comp225/my-react-app/src/components/Tooltip/Tooltip.js';
 
 function App() {
   return (
-    <div className="App">
+    <div className="App">   
+    <button> Alert</button>
+    <Tooltip text = {"Press"}>
+    <span class="material-symbols-outlined">
+info
+</span>
+    </Tooltip>
       <header className="App-header">
         <Header/>
       </header>
