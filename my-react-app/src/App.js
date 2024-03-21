@@ -3,6 +3,7 @@ import Quiz from './components/Quiz/Quiz';
 import Header from "./containers/Header/Header";
 import Apple from "./Apple.png";
 import "./App.css";
+import StockChart from './components/StockChart/StockChart';
 
 function App() {
   return (
@@ -13,15 +14,20 @@ function App() {
       <div className="App-content">
         <div className="App-column">
           <div className='App-column__image'>
-          <img src={Apple} height="400px" width="700px"/>
+          <div className="StockChart-section">
+        <StockChart />
+      </div>
           </div>
         </div>
         <div className="App-column">
           <Quiz/>
         </div>
-      </div>
+      </div> 
     </div>
   );
 }
 
 export default App;
+
+
+
