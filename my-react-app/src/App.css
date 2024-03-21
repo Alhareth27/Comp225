@@ -24,3 +24,8 @@
   justify-content: center;
   align-items: center;
 }
+
+.Stockchart-section {
+  width: 95%;
+  height: 60vh;
+}

@@ -13,11 +13,9 @@ function App() {
       </header>
       <div className="App-content">
         <div className="App-column">
-          <div className='App-column__image'>
-          <div className="StockChart-section">
+          <div className="Stockchart-section">
         <StockChart />
       </div>
-          </div>
         </div>
         <div className="App-column">
           <Quiz/>

@@ -1,4 +1,3 @@
-
 import AppleData from './AAPL.csv';
 import Papa from 'papaparse';
 import { useEffect, useState } from 'react';
@@ -70,7 +69,7 @@ function StockChart () {
                         },
                         title: {
                             display: true,
-                            text: "Apple Inc. (AAPL)",
+                            text: "Today's Stock",
                         },
                         tooltip: {
                             callbacks: {
