@@ -5,6 +5,18 @@ import "./quiz.css";
 
 const questions = [
   {
+    question: "What is a stock?",
+    options: ["Crypto currency of a company", "Electronic check of a company", "A fraction (share) of ownership of a company", "Financial product released by a company"],
+    correctAnswer: "A fraction (share) of ownership of a company",
+    explanation: "Stocks consist of all the shares by which ownership of a company is divided."
+  },
+  {
+    question: "On a stock exchange, what kind of company are you allowed to invest in?",
+    options: ["Private", "Public", "Non-Profit", "Fraudulent"],
+    correctAnswer: "Public",
+    explanation: "A stock exchange is essentially a virtual marketplace where you can sell and buy stocks of various public companies"
+  },
+  {
     question: "What does the PE ratio measure in a company?",
     options: ["How much investors are willing to pay for each dollar of earnings", "The company's debt levels compared to its equity.", "The dividend yield the company pays out to its shareholders.", "The total market value of a company's outstanding shares."],
     correctAnswer: "How much investors are willing to pay for each dollar of earnings",
@@ -22,6 +34,7 @@ const questions = [
     correctAnswer: "Market correlation",
     explanation: "The beta of a company measures the volatility of its stock price relative to the overall market, indicating how much the stock price is expected to change compared to market movements."
   }
+
 ];
 
 const Quiz = () => {
