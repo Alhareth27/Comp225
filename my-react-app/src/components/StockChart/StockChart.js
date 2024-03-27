@@ -1,4 +1,4 @@
-import AppleData from './AAPL.csv';
+import AppleData from './AAPL201020.csv';
 import Papa from 'papaparse';
 import { useEffect, useState } from 'react';
 import {Bar} from 'react-chartjs-2';
@@ -10,7 +10,7 @@ import {
     Chart as ChartJS, 
     CategoryScale,
     LinearScale,
-    BarElement, 
+    BarElement, // can change to LineElement if we want a line graph instead 
     Title,
     Tooltip, 
     Legend,
