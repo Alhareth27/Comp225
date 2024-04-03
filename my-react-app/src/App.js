@@ -1,10 +1,18 @@
-import React from 'react';
-import Quiz from './components/Quiz/Quiz'; 
+// App.js
+import React, { useState } from 'react';
+import Quiz from './components/Quiz/Quiz';
+import TimerScreen from './components/TimerScreen/TimerScreen';
 import Header from "./containers/Header/Header";
 import "./App.css";
 import StockChart from './components/StockChart/StockChart';
 
 function App() {
+  const [quizStarted, setQuizStarted] = useState(false);
+
+  const handleStartQuiz = () => {
+    setQuizStarted(true);
+  };
+
   return (
     <div className="App">   
       <header className="App-header">
@@ -13,11 +21,15 @@ function App() {
       <div className="App-content">
         <div className="App-column">
           <div className="Stockchart-section">
-        <StockChart />
-      </div>
+            <StockChart />
+          </div>
         </div>
         <div className="App-column">
-          <Quiz/>
+          {quizStarted ? (
+            <Quiz />
+          ) : (
+            <TimerScreen onStartQuiz={handleStartQuiz} />
+          )}
         </div>
       </div> 
     </div>
@@ -25,6 +37,3 @@ function App() {
 }
 
 export default App;
-
-
-

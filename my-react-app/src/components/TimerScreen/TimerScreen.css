@@ -1,0 +1,23 @@
+.timer-screen {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .timer-screen p {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .timer-screen button {
+    padding: 15px 10px;
+    font-size: 16px;
+    background-color: #0F3B5F;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .timer-screen button:hover {
+    background-color: #0F3B5F;
+  }
