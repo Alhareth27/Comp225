@@ -1,7 +1,7 @@
 import AppleData from './AAPL201020.csv';
 import Papa from 'papaparse';
 import { useEffect, useState } from 'react';
-import {Bar} from 'react-chartjs-2';
+import {Bar} from 'react-chartjs-2'; 
 import 'hammerjs';
 import 'chartjs-plugin-zoom';
 
@@ -10,7 +10,7 @@ import {
     Chart as ChartJS, 
     CategoryScale,
     LinearScale,
-    BarElement, // can change to LineElement if we want a line graph instead 
+    BarElement,
     Title,
     Tooltip, 
     Legend,
@@ -56,7 +56,7 @@ function StockChart () {
                         {
                             label: "Close Price",
                             data: data,
-                            borderColor: "black",
+                            borderColor: "blue",
                             backgroundColor: "blue",
                         }
                     ]

@@ -1,0 +1,17 @@
+.ConsolidatedStatementsTable table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  .ConsolidatedStatementsTable th, .ConsolidatedStatementsTable td {
+    border: 1px solid grey;
+    padding: 10px;
+    text-align: left;
+  }
+  
+  .ConsolidatedStatementsTable th {
+    background-color: #f2f2f2;
+  }
+
+
+  
