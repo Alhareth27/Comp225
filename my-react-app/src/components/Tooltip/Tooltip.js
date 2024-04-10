@@ -9,6 +9,7 @@ export const Tooltip = ({text, children}) => {
             onMouseLeave = {() => setIsVisible(false)}
             >
             {children}
+            <span className="tooltip-icon" aria-hidden="true"> ❓ </span>
             {isVisible&& <div className="tooltip">{text}</div>} 
         </div>
     );

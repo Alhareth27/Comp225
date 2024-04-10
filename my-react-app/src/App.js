@@ -5,6 +5,7 @@ import TimerScreen from './components/TimerScreen/TimerScreen';
 import Header from "./containers/Header/Header";
 import "./App.css";
 import StockChart from './components/StockChart/StockChart';
+import IncomeStmtTable from './components/IncomeStmt/IncomeStmt';
 
 function App() {
   const [quizStarted, setQuizStarted] = useState(false);
@@ -21,7 +22,7 @@ function App() {
       <div className="App-content">
         <div className="App-column">
           <div className="Stockchart-section">
-            <StockChart />
+            < IncomeStmtTable/>
           </div>
         </div>
         <div className="App-column">

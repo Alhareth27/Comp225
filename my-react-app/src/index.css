@@ -7,10 +7,16 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 .tooltip-container {
-  display: inline-block;
-  position: relative;
+  display: inline-flex;
+  align-items: center; 
   cursor: help;
+  position: relative;
 }
+
+.tooltip-icon {
+  margin-left: 4px; 
+}
+
 .tooltip {
   position: absolute;
   bottom: 100%;

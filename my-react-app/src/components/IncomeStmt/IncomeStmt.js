@@ -1,6 +1,7 @@
 import React from 'react';
 import sooData from './IncomeStmt.json';
 import './IncomeStmt.css';
+import { Tooltip } from '../Tooltip/Tooltip';
 
 function IncomeStmtTable() {
   const { title, subtitle, columns, rows } = sooData;
@@ -8,7 +9,15 @@ function IncomeStmtTable() {
   const renderRow = (row, level = 0) => {
     return (
       <tr key={row.label}>
-        <td style={{ paddingLeft: `${15 + level * 15}px` }}>{row.label}</td>
+        <td style={{ paddingLeft: `${15 + level * 15}px` }}>
+          {row.details !== undefined ? ( 
+            <Tooltip text={`${row.details}`}>
+              <span>{row.label}</span>
+            </Tooltip>
+          ) : (
+            <span>{row.label}</span> 
+          )}
+        </td>
         {row.values?.map((value, index) => (
           <td key={index}>{value}</td>
         ))}
