@@ -1,0 +1,48 @@
+.finance-shelf-container {
+    position: relative;
+  }
+  
+  .sidebar-menu-icon {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    cursor: pointer;
+    color:white;
+    font-size: 30px;
+  }
+
+  .close-button {
+    cursor: pointer;
+    position: absolute;
+    bottom: 10px; 
+    right: 10px;
+    padding: 5px;
+    background-color: #ccc; 
+    border-radius: 5px;
+  }
+  
+  
+  .shelf {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 300px;
+    height: 100%;
+    background: #f0f0f0;
+    box-shadow: 2px 0px 5px rgba(0,0,0,0.5);
+  }
+  
+  .term-container {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .term-title {
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .term-description {
+    padding-top: 5px;
+  }
+  
