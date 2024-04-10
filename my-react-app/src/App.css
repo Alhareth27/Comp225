@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  position: relative; 
 }
 
 .App-header {
@@ -28,4 +29,11 @@
 .Stockchart-section {
   width: 95%;
   height: 60vh;
+}
+
+.finance-shelf-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1000; 
 }

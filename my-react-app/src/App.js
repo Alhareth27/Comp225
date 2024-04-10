@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import Quiz from './components/Quiz/Quiz';
 import TimerScreen from './components/TimerScreen/TimerScreen';
 import Header from "./containers/Header/Header";
+import FinanceShelf from './components/FinanceShelf/FinanceShelf';
 import "./App.css";
 import StockChart from './components/StockChart/StockChart';
 
@@ -15,6 +16,7 @@ function App() {
 
   return (
     <div className="App">   
+    <FinanceShelf />
       <header className="App-header">
         <Header/>
       </header>
