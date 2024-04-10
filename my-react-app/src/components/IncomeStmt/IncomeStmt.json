@@ -34,7 +34,8 @@
             ],
             "total": {
               "label": "Total change in unrealized gains/losses on derivative instruments, net of tax",
-              "values": ["(592)", "1,539", "64"]
+              "values": ["(592)", "1,539", "64"],
+              "details": " This is a ToolTip!"
             }
           },
           {
@@ -62,7 +63,9 @@
       },
       {
         "label": "Total comprehensive income",
-        "values": ["51,967", "41,063", "36,067"]
+        "values": ["51,967", "41,063", "36,067"],
+        "details": " This is a ToolTip!"
+
       }
     ]
   }
