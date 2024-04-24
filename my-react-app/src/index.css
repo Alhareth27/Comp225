@@ -46,6 +46,18 @@ body {
   visibility: visible; 
   bottom: 110%;
 }
+.option-button {
+  color: #0F3B5F;
+  position: relative; 
+}
+
+.check-icon,
+.times-icon {
+  position: absolute; 
+  top: 50%; 
+  transform: translateY(-50%); 
+  font-size: 1.5em; 
+}
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
