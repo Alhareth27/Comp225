@@ -1,0 +1,17 @@
+.RetEarnTable table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  .RetEarnTable th, .RetEarnTable td {
+    border: 1px solid grey;
+    padding: 10px;
+    text-align: left;
+  }
+  
+  .RetEarnTable th {
+    background-color: #f2f2f2;
+  }
+
+
+  

@@ -5,8 +5,9 @@ import TimerScreen from './components/TimerScreen/TimerScreen';
 import Header from "./containers/Header/Header";
 import FinanceShelf from './components/FinanceShelf/FinanceShelf';
 import "./App.css";
-import StockChart from './components/StockChart/StockChart';
-import IncomeStmtTable from './components/IncomeStmt/IncomeStmt';
+// import StockChart from './components/StockChart/StockChart';
+// import IncomeStmtTable from './components/IncomeStmt/IncomeStmt';
+import RetEarTable from './components/RetEarn/RetEarnTable'
 
 function App() {
   const [quizStarted, setQuizStarted] = useState(false);
@@ -24,7 +25,7 @@ function App() {
       <div className="App-content">
         <div className="App-column">
           <div className="Stockchart-section">
-            < IncomeStmtTable/>
+            < RetEarTable/>
           </div>
         </div>
         <div className="App-column">

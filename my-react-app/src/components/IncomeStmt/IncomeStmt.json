@@ -1,71 +1,50 @@
 {
-    "title": "CONSOLIDATED STATEMENTS OF COMPREHENSIVE INCOME",
-    "subtitle": "(In millions)",
+    "title": "Consolidated Statements of Income",
+    "subtitle": "(In millions of $)",
     "columns": [
-      "September 26, 2015",
       "September 27, 2014",
       "September 28, 2013"
     ],
     "rows": [
       {
-        "label": "Net income",
-        "values": ["53,394", "39,510", "37,037"],
-        "details": "the amount an individual or business makes after deducting costs, allowances and taxes"
+        "label": "Services Revenue",
+        "values": ["$ 40,246", "$ 37,280"],
+        "details": "The income a company receives for performing a service"
       },
       {
-        "label": "Other comprehensive income/(loss)",
-        "children": [
-          {
-            "label": "Change in foreign currency translation, net of tax effects of $201, $50 and $35, respectively",
-            "values": ["(411)", "(137)", "(112)"],
-            "details": " This is a ToolTip!"
-          },
-          {
-            "label": "Change in unrealized gains/losses on derivative instruments",
-            "children": [
-              {
-                "label": "Change in fair value of derivatives, net of tax benefit/(expense) of $(441), $(297) and $(351), respectively",
-                "values": ["2,905", "1,390", "522"]
-              },
-              {
-                "label": "Adjustment for net (gains)/losses realized and included in net income, net of tax expense/(benefit) of $630, $(36) and $255, respectively",
-                "values": ["(3,497)", "149", "(458)"]
-              }
-            ],
-            "total": {
-              "label": "Total change in unrealized gains/losses on derivative instruments, net of tax",
-              "values": ["(592)", "1,539", "64"],
-              "details": " This is a ToolTip!"
-            }
-          },
-          {
-            "label": "Change in unrealized gains/losses on marketable securities",
-            "children": [
-              {
-                "label": "Change in fair value of marketable securities, net of tax benefit/(expense) of $264, $(153) and $458, respectively",
-                "values": ["(483)", "285", "(791)"]
-              },
-              {
-                "label": "Adjustment for net (gains)/losses realized and included in net income, net of tax expense/(benefit) of $(32), $71 and $82, respectively",
-                "values": ["59", "(134)", "(131)"]
-              }
-            ],
-            "total": {
-              "label": "Total change in unrealized gains/losses on marketable securities, net of tax",
-              "values": ["(424)", "151", "(922)"]
-            }
-          }
-        ],
-        "total": {
-          "label": "Total other comprehensive income/(loss)",
-          "values": ["(1,427)", "1,553", "(970)"]
-        }
+        "label": "Products Revenue",
+        "values": ["8,567", "7,761"],
+        "details": "Total amount of income an individual product generates"
       },
       {
-        "label": "Total comprehensive income",
-        "values": ["51,967", "41,063", "36,067"],
-        "details": " This is a ToolTip!"
-
+        "label": "Total Revenues",
+        "values": ["48,813", "45,051"]
+      },
+      {
+        "label": "Cost of Services (exclusive of depreciation and ammortization)",
+        "values": ["(21,356)", "(20,090)"]
+      },
+      {
+        "label": "Cost of Products (exclusive of depreciation and ammortization)",
+        "values": ["(5,064)", "(4,944)"]
+      },
+      {
+        "label": "Selling, General, Administrative & Other",
+        "values": ["(8,565)", "(8,365)"]
+      },
+      {
+        "label": "Depreciation and Amortization",
+        "values": ["(2,288)", "(2,192)"],
+        "details": "Depreciation is the amount of asset value lost over time. Amortization is a method for decreasing an asset cost over a period of time."
+      },
+      {
+        "label": "Total Costs and Expenses",
+        "values": ["(37,273)", "(35,591)"]
+      },
+      {
+        "label": "Net Income",
+        "values": ["11,540", "9,450"],
+        "details": "Net income is what a business or individual makes after taxes, deductions, and other expenses are taken out"
       }
     ]
   }

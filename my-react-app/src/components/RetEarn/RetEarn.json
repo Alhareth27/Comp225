@@ -1,0 +1,45 @@
+{
+    "title": "Consolidated Statements of Retained Earnings",
+    "subtitle": "(In millions of $)",
+    "columns": [
+      "Two years ending September 27, 2014"
+    ],
+    "rows": [
+      {
+        "label": "Retained Earnings",
+        "values": ["$ 42,965"],
+        "details": "Retained earnings are the amount of profit a company has left over after paying all its direct costs, indirect costs, income taxes and its dividends to shareholders. "
+      },
+      {
+        "label": "Net Income attributable to the company year ended Sep 28, 2013",
+        "values": ["6,136"],
+        "details": "This value is taken from the income statement. The 4 financial statements are connected to each other!"
+      },
+      {
+        "label": "Dividends declared, year ended Sep 28, 2013",
+        "values": ["(1,342)"],
+        "details": "A dividend declared is the fraction of earnings that the board of directors of a company decides to distribute as dividends to its shareholders in exchange for their investment in the form of stock purchases."
+      },
+      {
+        "label": "Other reductions, year ended Sep 28, 2013",
+        "values": ["(1)"]
+      },
+      {
+        "label": "Retained earnings, Sep 28, 2013",
+        "values": ["47,758"]
+      },
+      {
+        "label": "Net Income attributable to the company year ended Sep 27, 2014",
+        "values": ["7,501"]
+      },
+      {
+        "label": "Dividends declared, year ended Sep 27, 2014",
+        "values": ["(1,525"]
+      }, 
+      {
+        "label": "Retained earnings, Sep 27, 2014",
+        "values": ["53, 735"]
+      }
+    ]
+  }
+  
