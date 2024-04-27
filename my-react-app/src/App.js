@@ -7,6 +7,7 @@ import "./App.css";
 import RetEarTable from './components/RetEarn/RetEarnTable';
 import IncomeStmtTable from './components/IncomeStmt/IncomeStmt';
 import StmtOpsTable from './components/StmtOpsTable/StmtOpsTable';
+import StockChart from './components/StockChart/StockChart';
 
 function App() {
   const [quizStarted, setQuizStarted] = useState(false);
@@ -17,7 +18,8 @@ function App() {
    const graphs = [
     <RetEarTable key={currentGraphIndex} />,
     <IncomeStmtTable key={currentGraphIndex} />,
-    <StmtOpsTable key={currentGraphIndex} />
+    <StmtOpsTable key={currentGraphIndex} />,
+    <StockChart key={currentGraphIndex}/>
   ];
  
 
