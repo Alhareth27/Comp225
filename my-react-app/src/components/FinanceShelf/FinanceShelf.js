@@ -33,7 +33,7 @@ const FinanceShelf = () => {
   return (
     <div className="finance-shelf-container" ref={shelfRef}>
       <div className="sidebar-menu-icon" onClick={toggleShelf}>
-        Menu
+        Glossary
       </div>
       {isOpen && (
         <div className="shelf">

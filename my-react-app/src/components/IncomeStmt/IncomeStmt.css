@@ -1,17 +1,25 @@
 .IncomeStmtTable table {
-    border-collapse: collapse;
-    width: 100%;
-  }
-  
-  .IncomeStmtTable th, .IncomeStmtTable td {
-    border: 1px solid grey;
-    padding: 10px;
-    text-align: left;
-  }
-  
-  .IncomeStmtTable th {
-    background-color: #f2f2f2;
-  }
+  border-collapse: collapse;
+  width: 100%;
+  background-color: #ffffff;
+}
 
+.IncomeStmtTable th, .IncomeStmtTable td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: left;
+}
 
-  
+.IncomeStmtTable th {
+  background-color: #e1eff6; 
+  color: #033e6b; 
+  font-weight: bold;
+}
+
+.IncomeStmtTable td {
+  background-color: #ffffff; 
+}
+
+.IncomeStmtTable tr:hover {
+  background-color: #f9f9f9; 
+}

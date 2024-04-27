@@ -1,17 +1,25 @@
-.RetEarnTable table {
-    border-collapse: collapse;
-    width: 100%;
-  }
-  
-  .RetEarnTable th, .RetEarnTable td {
-    border: 1px solid grey;
-    padding: 10px;
-    text-align: left;
-  }
-  
-  .RetEarnTable th {
-    background-color: #f2f2f2;
-  }
+.RetEarTable table {
+  border-collapse: collapse;
+  width: 100%;
+  background-color: #ffffff;
+}
 
+.RetEarTable th, .RetEarTable td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: left;
+}
 
-  
+.RetEarTable th {
+  background-color: #e1eff6;
+  color: #033e6b;
+  font-weight: bold;
+}
+
+.RetEarTable td {
+  background-color: #ffffff;
+}
+
+.RetEarTable tr:hover {
+  background-color: #f9f9f9;
+}

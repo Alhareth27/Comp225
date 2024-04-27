@@ -1,17 +1,25 @@
 .ConsolidatedStatementsTable table {
-    border-collapse: collapse;
-    width: 100%;
-  }
-  
-  .ConsolidatedStatementsTable th, .ConsolidatedStatementsTable td {
-    border: 1px solid grey;
-    padding: 10px;
-    text-align: left;
-  }
-  
-  .ConsolidatedStatementsTable th {
-    background-color: #f2f2f2;
-  }
+  border-collapse: collapse;
+  width: 100%;
+  background-color: #ffffff;
+}
 
+.ConsolidatedStatementsTable th, .ConsolidatedStatementsTable td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: left;
+}
 
-  
+.ConsolidatedStatementsTable th {
+  background-color: #e1eff6;
+  color: #033e6b;
+  font-weight: bold;
+}
+
+.ConsolidatedStatementsTable td {
+  background-color: #ffffff;
+}
+
+.ConsolidatedStatementsTable tr:hover {
+  background-color: #f9f9f9;
+}

@@ -145,9 +145,7 @@ const Quiz = () => {
 
   const handleOptionSelect = (option) => {
     setSelectedOption(option);
-    if (questions[currentQuestionIndex].correctAnswer === option) {
-      setExplanationShown(true); 
-    }
+    setExplanationShown(true);
   };
 
   const handleNextQuestion = () => {
