@@ -8,9 +8,11 @@ import RetEarTable from './components/RetEarn/RetEarnTable';
 import IncomeStmtTable from './components/IncomeStmt/IncomeStmt';
 import StmtOpsTable from './components/StmtOpsTable/StmtOpsTable';
 import StockChart from './components/StockChart/StockChart';
+import questions from "./components/Quiz/questions.json"
 
 function App() {
   const [quizStarted, setQuizStarted] = useState(false);
+  const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [currentGraphIndex, setCurrentGraphIndex] = useState(0);
   const [graphCounter, setGraphCounter] = useState();
 
@@ -62,12 +64,15 @@ function App() {
       <div className="App-content">
         <div className="App-column">
           <div className="Stockchart-section">
-            {graphs[graphCounter]}
+          {graphs[questions[currentQuestionIndex].graphIndex]}
           </div>
         </div>
         <div className="App-column">
           {quizStarted ? (
-            <Quiz />
+            <Quiz 
+            currentQuestionIndex={currentQuestionIndex} 
+            setCurrentQuestionIndex={setCurrentQuestionIndex} 
+            />
           ) : (
             <TimerScreen onStartQuiz={handleStartQuiz} />
           )}

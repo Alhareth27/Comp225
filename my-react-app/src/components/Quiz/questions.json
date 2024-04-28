@@ -1,42 +1,197 @@
 [
-    {
+  {
+    "question": "What is the closing price?",
+    "options": [
+      "The last price at which the stock is traded on a regular trading day",
+      "The last price at which the stock is ever traded",
+      "The highest price a stock reaches during the trading day",
+      "The price at which a stock begins trading at the start of the trading day"
+    ],
+    "correctAnswer": "The last price at which the stock is traded on a regular trading day",
+    "explanation": "The closing price is the final price at which a stock is traded during a regular trading day, reflecting the market's final consensus of value for that day.",
+    "hint": "Think of it as the last recorded trade before the market closes.",
+    "graphIndex": 3
+  },
+  {
+    "question": "What information does the high price of a stock on a given day tell us?",
+    "options": [
+      "It indicates the starting price of the stock for the day",
+      "It represents the lowest price point of the stock for that day",
+      "It shows the highest price that the stock reached during the trading day",
+      "It is the final trading price of the stock for the day"
+    ],
+    "correctAnswer": "It shows the highest price that the stock reached during the trading day",
+    "explanation": "The high price is the peak trading price of the stock for the day, indicating the maximum value investors paid during the trading session.",
+    "hint": "This price point can reflect investor enthusiasm and market demand at its peak.",
+    "graphIndex": 3
+  },
+  {
+    "question": "What is the difference between the opening price on 2010/01/01 and 2020/01/01?",
+    "options": ["140.50", "100.89", "113.39", "95.8"],
+    "correctAnswer": "113.39",
+    "explanation": "The difference of 113.39 between the opening prices on these dates indicates the change in stock price at the start of the trading day over a decade.",
+    "hint": "This question looks at the long-term change in value right at the market's opening.",
+    "graphIndex": 3
+  },
+  {
+    "question": "Why is the 'Volume' important in a stock over time chart?",
+    "options": [
+      "It shows the total money value of the stock traded",
+      "It indicates the number of shares traded during a given day, which shows the stock's liquidity and activity level",
+      "It represents the opening price of the stock",
+      "It is the adjusted closing price of the stock after market close"
+    ],
+    "correctAnswer": "It indicates the number of shares traded during a given day, which shows the stock's liquidity and activity level",
+    "explanation": "Volume is crucial as it reflects the activity level and liquidity of the stock, helping investors gauge interest and potential price movement.",
+    "hint": "Higher trading volumes often suggest strong interest and can lead to more significant price movement.",
+    "graphIndex": 3
+  },
+  {
+    "question": "What does 'Adjusted Close' represent on a stock chart?",
+    "options": [
+      "The price of the stock is adjusted for dividends and splits after the market closes",
+      "The unmodified closing price of the stock",
+      "The average price of the stock throughout the trading day",
+      "The total volume of the stock traded during the day"
+    ],
+    "correctAnswer": "The price of the stock is adjusted for dividends and splits after the market closes",
+    "explanation": "Adjusted Close provides a more accurate reflection of a stock's value after accounting for dividends and splits, offering a clearer picture of its historical performance.",
+    "hint": "This measure helps investors compare the stock's closing price over time without the skew of distributions or structural changes.",
+    "graphIndex": 3
+  },
+  {
+    "question": "How much did the Products Revenue increase from September 28, 2013 to September 27, 2014?",
+    "options": [
+      "806",
+      "985",
+      "1013",
+      "876"
+    ],
+    "correctAnswer": "806",
+    "explanation": "The increase in Products Revenue from September 28, 2013 to September 27, 2014 was 806 million dollars, indicating growth in product sales over the year.",
+    "hint": "Calculate the difference between the Products Revenue for the two years to find the increase.",
+    "graphIndex": 1
+  },
+  {
+    "question": "What is the formula for calculating Net Income?",
+    "options": [
+      "Expenses - Revenue",
+      "Service Revenue - Cost of Services",
+      "Total Revenue - Total Expenses",
+      "Products Revenue - Cost of Products"
+    ],
+    "correctAnswer": "Total Revenue - Total Expenses",
+    "explanation": "Net Income is calculated by subtracting Total Expenses from Total Revenue, providing a measure of the company's profitability after all costs have been accounted for.",
+    "hint": "Think of Net Income as the bottom line of a company's income statement.",
+    "graphIndex": 1
+  },
+  {
+    "question": "What would net income be if Total Costs and Expenses for September 2014 were 38,000 instead?",
+    "options": [
+      "10,200",
+      "10,813",
+      "11,450",
+      "9,600"
+    ],
+    "correctAnswer": "10,813",
+    "explanation": "With Total Costs and Expenses at 38,000, the calculation for Net Income would show a profit of 10,813, assuming total revenues remain constant.",
+    "hint": "Subtract the hypothetical Total Costs and Expenses from the reported Total Revenues to find the adjusted Net Income.",
+    "graphIndex": 1
+  },
+  {
+    "question": "What does the statement of Income tell us?",
+    "options": [
+      "The assets, liabilities of a company at a specific point in time.",
+      "The revenue, expenses, and profit or loss of a company over a specific period.",
+      "The cash inflows and outflows from operating, investing, and financing activities.",
+      "The inventory levels and production costs associated with a company’s operations."
+    ],
+    "correctAnswer": "The revenue, expenses, and profit or loss of a company over a specific period.",
+    "explanation": "The statement of Income provides a financial summary of a company's operational performance in terms of revenue, expenses, and net profit or loss over a defined period.",
+    "hint": "This financial statement is like a financial snapshot of a company's operating performance for a specific period.",
+    "graphIndex": 1
+  },
+  {
+    "question": "Should you invest in a company ONLY because it has a positive net income value?",
+    "options": [
+      "Yes, because a positive net income indicates a company is profitable and a safe investment.",
+      "Yes, because net income is the only indicator necessary to assess the financial health of a company.",
+      "No, because net income is calculated before dividends and may not reflect actual cash available to shareholders.",
+      "No, because a positive net income does not reflect other important factors like market conditions, debt levels, and future growth potential."
+    ],
+    "correctAnswer": "No, because a positive net income does not reflect other important factors like market conditions, debt levels, and future growth potential.",
+    "explanation": "While a positive net income is a good indicator of profitability, it should not be the sole factor in investment decisions as it doesn't account for other vital aspects such as debt, market conditions, and growth prospects.",
+    "hint": "Consider a holistic view of a company's financial and strategic position before investing, rather than focusing solely on net income.",
+    "graphIndex": 1
+  },
+  {
     "question": "What is a stock?",
-    "options": ["Crypto currency of a company", "Electronic check of a company", "A fraction (share) of ownership of a company", "Financial product released by a company"],
+    "options": [
+      "Crypto currency of a company",
+      "Electronic check of a company",
+      "A fraction (share) of ownership of a company",
+      "Financial product released by a company"
+    ],
     "correctAnswer": "A fraction (share) of ownership of a company",
     "explanation": "Stocks consist of all the shares by which ownership of a company is divided.",
-    "hint": "Think of it as owning a small piece of a company."
+    "hint": "Think of it as owning a small piece of a company.",
+    "graphIndex": 0
   },
   {
     "question": "On a stock exchange, what kind of company are you allowed to invest in?",
     "options": ["Private", "Public", "Non-Profit", "Fraudulent"],
     "correctAnswer": "Public",
     "explanation": "A stock exchange is essentially a virtual marketplace where you can sell and buy stocks of various public companies",
-    "hint": "These companies have shares that the general public can freely buy and sell."
+    "hint": "These companies have shares that the general public can freely buy and sell.",
+    "graphIndex": 1
   },
   {
     "question": "What does the PE ratio measure in a company?",
-    "options": ["How much investors are willing to pay for each dollar of earnings", "The company's debt levels compared to its equity.", "The dividend yield the company pays out to its shareholders.", "The total market value of a company's outstanding shares."],
+    "options": [
+      "How much investors are willing to pay for each dollar of earnings",
+      "The company's debt levels compared to its equity.",
+      "The dividend yield the company pays out to its shareholders.",
+      "The total market value of a company's outstanding shares."
+    ],
     "correctAnswer": "How much investors are willing to pay for each dollar of earnings",
     "explanation": "The PE ratio measures the company's share price relative to its per-share earnings.",
-    "hint": "It's a valuation metric that assesses the market's valuation of a company's earnings."
+    "hint": "It's a valuation metric that assesses the market's valuation of a company's earnings.",
+    "graphIndex": 2
   },
   {
     "question": "What is the market cap of a company?",
-    "options": ["The debt of the company", "The annual profit of the company", "The total value of the company", "Total amount of cash the company owns"],
+    "options": [
+      "The debt of the company",
+      "The annual profit of the company",
+      "The total value of the company",
+      "Total amount of cash the company owns"
+    ],
     "correctAnswer": "The total value of the company",
     "explanation": "The market capitalization of a company is the total market value of its outstanding shares of stock, calculated by multiplying the current share price by the total number of outstanding shares.",
-    "hint": "This figure represents the company's overall valuation in the stock market."
+    "hint": "This figure represents the company's overall valuation in the stock market.",
+    "graphIndex": 3
   },
   {
     "question": "What is the beta of a company?",
-    "options": ["Volatility", "Rate of return", "Debt-to-equity ratio", "Market correlation"],
+    "options": [
+      "Volatility",
+      "Rate of return",
+      "Debt-to-equity ratio",
+      "Market correlation"
+    ],
     "correctAnswer": "Market correlation",
     "explanation": "The beta of a company measures the volatility of its stock price relative to the overall market, indicating how much the stock price is expected to change compared to market movements.",
-    "hint": "This number tells you how a stock is expected to perform compared to the market as a whole."
+    "hint": "This number tells you how a stock is expected to perform compared to the market as a whole.",
+    "graphIndex": 0
   },
   {
     "question": "What indicates a company's ability to pay short-term obligations?",
-    "options": ["Current ratio", "PE ratio", "Earnings per share", "Market cap"],
+    "options": [
+      "Current ratio",
+      "PE ratio",
+      "Earnings per share",
+      "Market cap"
+    ],
     "correctAnswer": "Current ratio",
     "explanation": "The current ratio is a liquidity ratio that measures a company's ability to pay short-term obligations or those due within one year.",
     "hint": "This ratio compares a firm's current assets to its current liabilities."
@@ -50,14 +205,24 @@
   },
   {
     "question": "What is a high dividend yield a potential sign of?",
-    "options": ["Company growth", "Stock undervaluation", "Financial stability", "Market volatility"],
+    "options": [
+      "Company growth",
+      "Stock undervaluation",
+      "Financial stability",
+      "Market volatility"
+    ],
     "correctAnswer": "Stock undervaluation",
     "explanation": "A high dividend yield may indicate that a stock is undervalued or that the company is distributing a large portion of its earnings as dividends.",
     "hint": "This yield can be appealing but might also signal that the stock price is low for reasons of concern."
   },
   {
     "question": "What does a company's 'book value' represent?",
-    "options": ["Total debt", "Asset value minus liabilities", "Annual revenue", "Market capitalization"],
+    "options": [
+      "Total debt",
+      "Asset value minus liabilities",
+      "Annual revenue",
+      "Market capitalization"
+    ],
     "correctAnswer": "Asset value minus liabilities",
     "explanation": "Book value represents a company's total assets minus its total liabilities, essentially the net value of the company according to its books.",
     "hint": "It's what remains if the company liquidates its assets to pay off all its liabilities."
@@ -71,35 +236,60 @@
   },
   {
     "question": "What does 'return on equity' measure?",
-    "options": ["Debt level", "Profit reinvestment", "Shareholder equity efficiency", "Liquidity"],
+    "options": [
+      "Debt level",
+      "Profit reinvestment",
+      "Shareholder equity efficiency",
+      "Liquidity"
+    ],
     "correctAnswer": "Shareholder equity efficiency",
     "explanation": "Return on equity (ROE) measures the ability of a firm to generate profits from its shareholders' investments in the company.",
     "hint": "This ratio indicates how good a company is at generating returns on the investment it received from its shareholders."
   },
   {
     "question": "What assesses a company's financial health by comparing its operating cash flow to its net debt?",
-    "options": ["Debt-to-equity ratio", "Cash flow adequacy", "Current ratio", "Earnings before interest and taxes"],
+    "options": [
+      "Debt-to-equity ratio",
+      "Cash flow adequacy",
+      "Current ratio",
+      "Earnings before interest and taxes"
+    ],
     "correctAnswer": "Cash flow adequacy",
     "explanation": "Cash flow adequacy examines whether a company can generate enough cash to pay off its debt, indicating its ability to sustain financial health.",
     "hint": "It’s about whether the company can cover what it owes with what it makes from its regular business operations."
   },
   {
     "question": "What does 'debt-to-equity ratio' indicate?",
-    "options": ["Company's borrowing habit", "Profitability per share", "Stock market performance", "Dividend reliability"],
+    "options": [
+      "Company's borrowing habit",
+      "Profitability per share",
+      "Stock market performance",
+      "Dividend reliability"
+    ],
     "correctAnswer": "Company's borrowing habit",
     "explanation": "The debt-to-equity ratio is a measure of a company's financial leverage calculated by dividing its total liabilities by stockholders' equity.",
     "hint": "This ratio shows the balance between the capital contributed by creditors and the capital contributed by shareholders."
   },
   {
     "question": "Which metric is used to compare a company's stock price to its revenues?",
-    "options": ["Price-to-earnings ratio", "Earnings per share", "Price-to-sales ratio", "Market capitalization"],
+    "options": [
+      "Price-to-earnings ratio",
+      "Earnings per share",
+      "Price-to-sales ratio",
+      "Market capitalization"
+    ],
     "correctAnswer": "Price-to-sales ratio",
     "explanation": "The price-to-sales ratio is a valuation ratio that compares a company’s stock price to its revenues, helping investors find undervalued stocks.",
     "hint": "This ratio can be useful for comparing the value of companies that are not profitable."
   },
   {
     "question": "What does the 'operating margin' reveal about a company?",
-    "options": ["Liquidity", "Profitability from core operations", "Total earnings", "Share value"],
+    "options": [
+      "Liquidity",
+      "Profitability from core operations",
+      "Total earnings",
+      "Share value"
+    ],
     "correctAnswer": "Profitability from core operations",
     "explanation": "The operating margin measures how much profit a company makes on a dollar of sales, after paying for variable costs of production, before interest and taxes.",
     "hint": "This figure shows what percentage of sales has turned into profits."

@@ -4,8 +4,7 @@ import { Tooltip } from '../Tooltip/Tooltip';
 import questions from "./questions.json";
 import "./quiz.css";
 
-const Quiz = () => {
-  const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
+const Quiz = ({ currentQuestionIndex, setCurrentQuestionIndex }) => {
   const [selectedOption, setSelectedOption] = useState(null);
   const [explanationShown, setExplanationShown] = useState(false);
   const [lastQuizTime, setLastQuizTime] = useState(null);
