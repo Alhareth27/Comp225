@@ -8,68 +8,82 @@
     "rows": [
       {
         "label": "Net sales",
-        "values": ["233,715", "182,795"]
+        "values": ["233,715", "182,795"],
+        "details": "The total amount of money received from selling goods and services before any costs are deducted"
       },
       {
         "label": "Cost of sales",
-        "values": ["140,089", "112,258"]
+        "values": ["140,089", "112,258"],
+        "details": "The direct costs attributed to the production of the goods sold, including materials and labor"
       },
       {
         "label": "Gross margin",
-        "values": ["93,626", "70,537"]
+        "values": ["93,626", "70,537"],
+        "details": "The profit a company makes after subtracting the costs associated with making and selling its products, but before subtracting overhead or payroll costs"
       },
       {
         "label": "Operating expenses",
         "children": [
           {
             "label": "Research and development",
-            "values": ["8,067", "6,041"]
+            "values": ["8,067", "6,041"],
+            "details": "Money spent on researching and developing new products or services to drive future growth"
           },
           {
             "label": "Selling, general and administrative",
-            "values": ["14,329", "11,993"]
+            "values": ["14,329", "11,993"],
+            "details": "The sum of all direct and indirect selling expenses and all general and administrative expenses of a company"
           }
         ]
       },
       {
         "label": "Total operating expenses",
-        "values": ["22,396", "18,034"]
+        "values": ["22,396", "18,034"],
+        "details": "The combined total of all expenses necessary to run the business, excluding the cost of sales but including R&D and SG&A"
       },
       {
         "label": "Operating income",
-        "values": ["71,230", "52,503"]
+        "values": ["71,230", "52,503"],
+        "details": "The profit realized from a business's operations after subtracting operating expenses from the gross margin"
       },
       {
         "label": "Other income/(expense), net",
-        "values": ["1,285", "980"]
+        "values": ["1,285", "980"],
+        "details": "Revenue or expenses that come from non-operational activities, like interest earned or paid, investments, and other non-regular business activities"
       },
       {
         "label": "Income before provision for income taxes",
-        "values": ["72,515", "53,483"]
+        "values": ["72,515", "53,483"],
+        "details": "The amount of income a company has earned before taxes have been taken out"
       },
       {
         "label": "Provision for income taxes",
-        "values": ["19,121", "13,973"]
+        "values": ["19,121", "13,973"],
+        "details": "The amount of income taxes a company expects to pay for the current year and may also include past taxes that are due"
       },
       {
         "label": "Net income",
-        "values": ["53,394", "39,510"]
+        "values": ["53,394", "39,510"],
+        "details": "The total profit of a company after all expenses, including taxes, have been subtracted from net sales"
       },
       {
         "label": "Earnings per share",
         "children": [
           {
             "label": "Basic",
-            "values": ["9.28", "6.49"]
+            "values": ["9.28", "6.49"],
+            "details": "The portion of a company's profit allocated to each outstanding share of common stock, without accounting for potential dilution from things like convertible securities"
           },
           {
             "label": "Diluted",
-            "values": ["9.22", "6.45"]
+            "values": ["9.22", "6.45"],
+            "details": "The portion of a company's profit allocated to each share of stock if all convertible securities were exercised"
           }
         ]
       },
       {
         "label": "Shares used in computing earnings per share",
+        "details": "The average number of shares outstanding during a reporting period, used to calculate basic or diluted earnings per share",
         "children": [
           {
             "label": "Basic",
@@ -83,7 +97,8 @@
       },
       {
         "label": "Cash dividends declared per share",
-        "values": ["1.98", "1.82"]
+        "values": ["1.98", "1.82"],
+        "details": "The amount of cash paid out to shareholders per share from the company's earnings"
       }
     ]
   }

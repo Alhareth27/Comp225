@@ -1,16 +1,26 @@
 import React from 'react';
 import RetEarData from './RetEarn.json'; 
 import './RetEarnTable.css';
-
+import { Tooltip } from '../Tooltip/Tooltip';
 function RetEarTable() {
   const { title, subtitle, columns, rows } = RetEarData;
 
   const renderRow = (row, isChild = false) => (
+    
     <tr key={row.label}>
-      <td style={{ paddingLeft: isChild ? '30px' : '0', ...(isChild ? {} : { paddingLeft: '15px' }) }}>{row.label}</td>
+      <td style={{ paddingLeft: isChild ? '30px' : '0', ...(isChild ? {} : { paddingLeft: '15px' }) }}>{row.label}
+      {row.details !== undefined ? ( 
+            <Tooltip text={`${row.details}`}>
+            </Tooltip>
+          ) : (
+            <span></span> 
+          )}
+      </td>
       {row.values?.map((value, index) => ( 
-        <td key={index}>{value}</td>
-      ))}
+        <td key={index}>{value} </td> 
+      )
+      
+      )}
     </tr>
   );
 

@@ -1,13 +1,23 @@
 import React from 'react';
 import sooData from './SOO.json'; 
 import './StmtOpsTable.css';
+import { Tooltip } from '../Tooltip/Tooltip';
 
 function ConsolidatedStatementsTable() {
   const { title, subtitle, columns, rows } = sooData;
 
   const renderRow = (row, isChild = false) => (
     <tr key={row.label}>
-      <td style={{ paddingLeft: isChild ? '30px' : '0', ...(isChild ? {} : { paddingLeft: '15px' }) }}>{row.label}</td>
+      <td style={{ paddingLeft: isChild ? '30px' : '0', ...(isChild ? {} : { paddingLeft: '15px' }) }}>{row.label}
+      
+      {row.details !== undefined ? ( 
+            <Tooltip text={`${row.details}`}>
+            </Tooltip>
+          ) : (
+            <span></span> 
+          )}
+      
+      </td>
       {row.values?.map((value, index) => ( 
         <td key={index}>{value}</td>
       ))}
