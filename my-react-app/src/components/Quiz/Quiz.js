@@ -10,6 +10,7 @@ const Quiz = ({ currentQuestionIndex, setCurrentQuestionIndex }) => {
   const [lastQuizTime, setLastQuizTime] = useState(null);
   const [quizCompleted, setQuizCompleted] = useState(false);
   const [remainingTime, setRemainingTime] = useState(0);
+  const [score, setScore] = useState(0);
 
   useEffect(() => {
     const lastTime = localStorage.getItem('lastQuizTime');
@@ -36,6 +37,10 @@ const Quiz = ({ currentQuestionIndex, setCurrentQuestionIndex }) => {
   const handleOptionSelect = (option) => {
     setSelectedOption(option);
     setExplanationShown(true);
+
+    if (isOptionCorrect(option)) {
+      setScore((prevScore) => prevScore + 20);
+    }
   };
 
   const handleNextQuestion = () => {
@@ -62,7 +67,7 @@ const Quiz = ({ currentQuestionIndex, setCurrentQuestionIndex }) => {
   return (
     <div className="quiz-container">
     {quizCompleted ? (
-      <p>Quiz completed! Next quiz available in {formatTimeLeft(remainingTime)}.</p>
+      <p>Quiz completed! You scored {score} points. Next quiz available in {formatTimeLeft(remainingTime)}.</p>
     ) : (
       <>
         <div className="question-card">
