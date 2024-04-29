@@ -90,14 +90,15 @@ const Quiz = ({ currentQuestionIndex, setCurrentQuestionIndex }) => {
         </div>
         {explanationShown && (
           <>
-            <div className="explanation">
-              {questions[currentQuestionIndex].explanation}
-            </div>
+            <div className="explanation">{questions[currentQuestionIndex].explanation}</div>
             <button className="next-button" onClick={handleNextQuestion}>Next</button>
           </>
         )}
       </>
     )}
+    <div className="progress-display">
+        Questions Answered: {currentQuestionIndex + 1} / {questions.length}
+      </div>
   </div>
   );
 };
