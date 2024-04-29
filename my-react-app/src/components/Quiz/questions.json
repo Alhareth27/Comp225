@@ -26,7 +26,7 @@
     "graphIndex": 3
   },
   {
-    "question": "What is the difference between the opening price on 2010/01/01 and 2020/01/01?",
+    "question": "What is the difference between the opening price on 2010/01/01 and 2020/11/01?",
     "options": ["140.50", "100.89", "113.39", "95.8"],
     "correctAnswer": "113.39",
     "explanation": "The difference of 113.39 between the opening prices on these dates indicates the change in stock price at the start of the trading day over a decade.",
@@ -60,7 +60,7 @@
     "graphIndex": 3
   },
   {
-    "question": "Why is \"Cost of Sales\" important to investors?",
+    "question": "Why is 'Cost of Sales' important to investors?",
     "options": [
       "It shows the dividends paid to shareholders.",
       "It indicates the efficiency of production and the direct costs involved in creating the company's products.",
@@ -73,7 +73,7 @@
     "graphIndex": 2
   },
   {
-    "question": "What can \"Operating Expenses\" tell us about a company?",
+    "question": "What can 'Operating Expenses' tell us about a company?",
     "options": [
       "The revenue generated from the main business activities.",
       "The investment income of the company.",
@@ -99,7 +99,7 @@
     "graphIndex": 2
   },
   {
-    "question": "What does \"Earnings Per Share\" tell an investor?",
+    "question": "What does 'Earnings Per Share' tell an investor?",
     "options": [
       "The total shares available in the market.",
       "The company's share price on the stock market.",
@@ -107,8 +107,8 @@
       "The number of shares that were sold during the financial year."
     ],
     "correctAnswer": "The amount of profit for each share of the company's stock, indicating the company's ability to generate profits.",
-    "explanation": "\"Earnings Per Share\" is a key indicator of a company's profitability, showing how much profit is earned for each share of stock, which can signal the company's financial health to investors.",
-    "hint": "Think of how the profitability per share can influence an investor’s perception of the company’s value.",
+    "explanation": "'Earnings Per Share' is a key indicator of a company's profitability, showing how much profit is earned for each share of stock, which can signal the company's financial health to investors.",
+    "hint": "Think of how the profitability per share can influence an investor's perception of the company's value.",
     "graphIndex": 2
   },
   {
@@ -220,7 +220,7 @@
     "options": [
       "Adding net income and subtracting dividends declared.",
       "Subtracting dividends declared from net income.",
-      "Adding dividends declared to the previous year’s retained earnings.",
+      "Adding dividends declared to the previous year's retained earnings.",
       "Subtracting net income from dividends declared."
     ],
     "correctAnswer": "Adding net income and subtracting dividends declared.",
@@ -247,7 +247,7 @@
       "The company regularly incurs losses.",
       "The company may be retaining profits for reinvestment in business growth.",
       "The company has decreasing assets.",
-      "The company’s stock is underperforming."
+      "The company's stock is underperforming."
     ],
     "correctAnswer": "The company may be retaining profits for reinvestment in business growth.",
     "explanation": "A consistent record of positive retained earnings suggests that the company is reinvesting profits into its operations, which may signal growth potential and business expansion.",
