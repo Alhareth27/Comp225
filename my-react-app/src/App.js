@@ -18,7 +18,7 @@ function App() {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [remainingTime, setRemainingTime] = useState(0);
   const [lastDayCompleted, setLastDayCompleted] = useState(null);
-  const [score, setScore] = useState(0);
+  const [score, setScore] = useState(0); // Added score state here
 
 
   const advanceToNextQuestion = () => {
@@ -113,13 +113,15 @@ function App() {
         <div className="App-column">
           {
             (lastDayCompleted === currentQuiz.day) ? (
-              <p>Quiz completed! You scored {(currentQuiz.questions[currentQuestionIndex].correctAnswer) ? score + 20 : score + 0} points. Next quiz available in {formatTimeLeft(remainingTime)}.</p>
+              <p>Quiz completed! You scored <b>{score} points</b>. Next quiz available in {formatTimeLeft(remainingTime)}.</p>
             ) : quizStarted ? (
               <>
                 <Quiz 
                   currentQuestionIndex={currentQuestionIndex} 
                   advanceToNextQuestion={advanceToNextQuestion} 
                   questions = {currentQuiz.questions}
+                  score={score}
+                  setScore={setScore}
                 />
               </>
             ) : (

@@ -3,16 +3,15 @@ import Option from "../Option/Option";
 import { Tooltip } from '../Tooltip/Tooltip';
 import "./quiz.css";
 
-const Quiz = ({currentQuestionIndex, advanceToNextQuestion, questions}) => {
+const Quiz = ({currentQuestionIndex, advanceToNextQuestion, questions, score, setScore}) => {
   const [selectedOption, setSelectedOption] = useState(null);
   const [explanationShown, setExplanationShown] = useState(false);
-  const [score, setScore] = useState(0);
 
   const handleOptionSelect = (option) => {
     setSelectedOption(option);
     setExplanationShown(true);
     if( isOptionCorrect (option) ){
-      setScore((prevScore) => prevScore + 20); 
+      setScore(score + 20);; 
     }
   };
 
