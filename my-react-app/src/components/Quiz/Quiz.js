@@ -54,7 +54,7 @@ const Quiz = ({currentQuestionIndex, advanceToNextQuestion, questions, score, se
         </>
       )}
       <div className="progress-display">
-        Questions Answered: {currentQuestionIndex + 1} / {questions.length}
+        Question: {currentQuestionIndex + 1} / {questions.length}
       </div>
     </div>
   );
