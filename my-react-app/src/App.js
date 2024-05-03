@@ -1,14 +1,14 @@
-import React, { useState, useEffect } from 'react'; // Importing React library for JSX functionality and hooks
-import Quiz from './components/Quiz/Quiz'; // Importing Quiz component
-import TimerScreen from './components/TimerScreen/TimerScreen'; // Importing TimerScreen component
-import Header from "./containers/Header/Header"; // Importing Header component
-import FinanceShelf from './components/FinanceShelf/FinanceShelf'; // Importing FinanceShelf component
-import "./App.css"; // Importing CSS styles for App component
-import RetEarTable from './components/RetEarn/RetEarnTable'; // Importing RetEarTable component
-import StmtOpsTable from './components/StmtOpsTable/StmtOpsTable'; // Importing StmtOpsTable component
-import StockChart from './components/StockChart/StockChart'; // Importing StockChart component
-import Days from "./Days.json"; // Importing Days data
-import AppleData from './components/StockChart/AAPL201020.csv'; // Importing Apple stock data
+import React, { useState, useEffect } from 'react';
+import Quiz from './components/Quiz/Quiz'; 
+import TimerScreen from './components/TimerScreen/TimerScreen'; 
+import Header from "./containers/Header/Header"; 
+import FinanceShelf from './components/FinanceShelf/FinanceShelf'; 
+import "./App.css"; 
+import RetEarTable from './components/RetEarn/RetEarnTable'; 
+import StmtOpsTable from './components/StmtOpsTable/StmtOpsTable'; 
+import StockChart from './components/StockChart/StockChart'; 
+import Days from "./Days.json"; 
+import AppleData from './components/StockChart/AAPL201020.csv';
 
 // Defining App functional component
 function App() {
@@ -63,7 +63,7 @@ function App() {
     return `${hours} hours, ${minutes} minutes, and ${seconds} seconds`;
   };
 
-  // Function to handle starting the quiz
+  
   const handleStartQuiz = () => {
     setQuizStarted(true);
   };
@@ -71,9 +71,9 @@ function App() {
   // Rendering JSX for App component
   return (
     <div className="App">
-      <FinanceShelf /> {/* Rendering FinanceShelf component */}
+      <FinanceShelf /> 
       <header className="App-header">
-        <Header /> {/* Rendering Header component */}
+        <Header /> 
       </header>
       <div className="App-content">
         <div className="App-column">
@@ -118,4 +118,4 @@ function renderGraph(graph) {
   }
 }
 
-export default App; // Exporting App component
+export default App; 

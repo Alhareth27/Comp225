@@ -1,10 +1,9 @@
-import React from 'react'; // Importing React library for JSX functionality
-import './StmtOpsTable.css'; // Importing CSS styles for StmtOpsTable component
-import { Tooltip } from '../Tooltip/Tooltip'; // Importing Tooltip component
+import React from 'react'; 
+import './StmtOpsTable.css';
+import { Tooltip } from '../Tooltip/Tooltip'; 
 
 // Defining ConsolidatedStatementsTable functional component with props graphData
 function ConsolidatedStatementsTable({ graphData }) {
-  // Destructuring props to extract title, subtitle, columns, and rows
   const { title, subtitle, columns, rows } = graphData;
 
   // Function to render a single row, with optional child styling
@@ -12,41 +11,39 @@ function ConsolidatedStatementsTable({ graphData }) {
     <tr key={row.label}>
       <td style={{ paddingLeft: isChild ? '30px' : '0', ...(isChild ? {} : { paddingLeft: '15px' }) }}>{row.label}
       
-      {/* Rendering a Tooltip component if row.details exists */}
       {row.details !== undefined ? (
         <Tooltip text={`${row.details}`}>
         </Tooltip>
       ) : (
-        <span></span> // Empty span if details are not provided
+        <span></span> 
       )}
       
       </td>
       {/* Mapping over row values to render table cells */}
       {row.values?.map((value, index) => ( 
-        <td key={index}>{value}</td> // Rendering table cell with value
+        <td key={index}>{value}</td> 
       ))}
     </tr>
   );
 
-  // Function to render rows and their children recursively
   const renderRows = (rows) =>
     rows.map((row) => [
-      renderRow(row), // Rendering parent row
-      row.children?.map((child) => renderRow(child, true)) // Rendering children rows
+      renderRow(row), 
+      row.children?.map((child) => renderRow(child, true)) 
     ]);
 
   // Returning JSX for ConsolidatedStatementsTable component
   return (
-    <div className="ConsolidatedStatementsTable"> {/* Applying CSS class */}
-      <h2>{title}</h2> {/* Rendering title */}
-      <p>{subtitle}</p> {/* Rendering subtitle */}
-      <table> {/* Rendering table */}
+    <div className="ConsolidatedStatementsTable"> 
+      <h2>{title}</h2> 
+      <p>{subtitle}</p> 
+      <table>
         <thead>
           <tr>
             <th>Category</th>
             {/* Mapping over columns to render table headers */}
             {columns.map((column, index) => (
-              <th key={index}>{column}</th> // Rendering table header with column name
+              <th key={index}>{column}</th> 
             ))}
           </tr>
         </thead>
@@ -56,4 +53,4 @@ function ConsolidatedStatementsTable({ graphData }) {
   );
 }
 
-export default ConsolidatedStatementsTable; // Exporting ConsolidatedStatementsTable component
+export default ConsolidatedStatementsTable; 

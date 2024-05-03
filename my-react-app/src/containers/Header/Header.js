@@ -1,10 +1,9 @@
-import React from "react"; // Importing React library for JSX functionality
-import "./header.css"; // Importing CSS styles for Header component
+import React from "react"; 
+import "./header.css"; 
 
-// Defining Header functional component
 const Header = () => {
     return(
-        <div className="header"> {/* Applying CSS class */}
+        <div className="header"> 
             Company of the Day {/* Displaying header text */}
         </div>
     )

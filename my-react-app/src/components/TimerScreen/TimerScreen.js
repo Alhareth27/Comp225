@@ -1,12 +1,11 @@
-import React from 'react'; // Importing React library for JSX functionality
-import PropTypes from 'prop-types'; // Importing PropTypes for prop type validation
-import './TimerScreen.css'; // Importing CSS styles for TimerScreen component
+import React from 'react'; 
+import PropTypes from 'prop-types'; 
+import './TimerScreen.css';
 
-// Defining TimerScreen functional component with props onStartQuiz
 const TimerScreen = ({ onStartQuiz }) => { 
   return (
-    <div className="timer-screen"> {/* Applying CSS class */}
-      <p>You can only do the quiz once a day! Click below to start!</p> {/* Displaying message */}
+    <div className="timer-screen"> 
+      <p>You can only do the quiz once a day! Click below to start!</p> 
       <button onClick={onStartQuiz}>Start Quiz</button> {/* Button to start quiz */}
     </div>
   );
@@ -14,7 +13,7 @@ const TimerScreen = ({ onStartQuiz }) => {
 
 // PropTypes validation for onStartQuiz prop
 TimerScreen.propTypes = {
-  onStartQuiz: PropTypes.func.isRequired, // Function prop is required
+  onStartQuiz: PropTypes.func.isRequired, 
 };
 
-export default TimerScreen; // Exporting TimerScreen component
+export default TimerScreen; 

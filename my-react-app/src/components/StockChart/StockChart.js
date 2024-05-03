@@ -1,8 +1,8 @@
-import Papa from 'papaparse'; // Importing Papa library for parsing CSV data
-import { useEffect, useState } from 'react'; // Importing React hooks for managing component state
-import { Bar } from 'react-chartjs-2'; // Importing Bar component from react-chartjs-2 library
-import 'hammerjs'; // Importing Hammer.js library for touch support
-import 'chartjs-plugin-zoom'; // Importing Chart.js zoom plugin
+import Papa from 'papaparse'; 
+import { useEffect, useState } from 'react'; 
+import { Bar } from 'react-chartjs-2'; 
+import 'hammerjs'; 
+import 'chartjs-plugin-zoom';
 
 import {
     Chart as ChartJS,
@@ -12,9 +12,9 @@ import {
     Title,
     Tooltip,
     Legend,
-} from 'chart.js'; // Importing necessary Chart.js components
+} from 'chart.js'; 
 
-// Registering Chart.js components
+
 ChartJS.register(
     CategoryScale,
     LinearScale,
@@ -26,10 +26,10 @@ ChartJS.register(
 
 // Defining StockChart functional component with props graphData
 function StockChart({ graphData }) {
-    const [chartData, setChartData] = useState({ // State for chart data
+    const [chartData, setChartData] = useState({ 
         datasets: []
     });
-    const [chartOptions, setChartOptions] = useState({}); // State for chart options
+    const [chartOptions, setChartOptions] = useState({}); 
 
     // Effect hook to parse CSV data and update chart
     useEffect(() => {
@@ -39,8 +39,8 @@ function StockChart({ graphData }) {
             dynamicTyping: true,
             complete: (result) => {
                 console.log(result);
-                const labels = result.data.map(item => item.Date.trim()); // Extracting date labels
-                const data = result.data.map(item => ({ // Processing data points
+                const labels = result.data.map(item => item.Date.trim()); 
+                const data = result.data.map(item => ({ 
                     x: item.Date.trim(),
                     y: +item.Close.toFixed(2) || 0,
                     open: item.Open.toFixed(2),
@@ -122,9 +122,9 @@ function StockChart({ graphData }) {
 
             },
         });
-    }, [graphData]); // Dependency array to re-run effect when graphData changes
+    }, [graphData]); 
 
-    // Rendering JSX for StockChart component
+    
     return (
         <div>
             <h1>Stock Chart</h1>
@@ -143,4 +143,4 @@ function StockChart({ graphData }) {
 
 }
 
-export default StockChart; // Exporting StockChart component
+export default StockChart; 

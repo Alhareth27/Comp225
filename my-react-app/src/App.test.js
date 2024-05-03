@@ -1,5 +1,5 @@
-import { render, screen } from '@testing-library/react'; // Importing render and screen utilities from testing library
-import App from './App'; // Importing App component
+import { render, screen } from '@testing-library/react';
+import App from './App'; 
 
 // Test case to check if "learn react" link is rendered
 test('renders learn react link', () => {
