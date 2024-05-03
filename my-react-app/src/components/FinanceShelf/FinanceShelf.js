@@ -1,32 +1,32 @@
 import React, { useState, useEffect, useRef } from 'react';
-import measuresData from "./measures.json";
-import "./FinanceShelf.css";
+import measuresData from "./measures.json"; // Load data from JSON file
+import "./FinanceShelf.css"; // Load custom CSS
 
 const FinanceShelf = () => {
-    const [isOpen, setIsOpen] = useState(false); 
-    const [activeTerm, setActiveTerm] = useState(null); 
-    const shelfRef = useRef(null); 
+    const [isOpen, setIsOpen] = useState(false); // State to toggle shelf visibility
+    const [activeTerm, setActiveTerm] = useState(null); // State to manage active glossary term
+    const shelfRef = useRef(null); // Ref to detect clicks outside the component
   
-    const toggleShelf = () => setIsOpen(!isOpen);
+    const toggleShelf = () => setIsOpen(!isOpen); // Toggle shelf open/close
     const toggleTerm = (term) => { 
-      setActiveTerm(activeTerm === term ? null : term);
+      setActiveTerm(activeTerm === term ? null : term); // Set or unset active term
     };
   
     useEffect(() => { 
         const handleClickOutside = (event) => {
           if (shelfRef.current && !shelfRef.current.contains(event.target)) {
-            setIsOpen(false);
+            setIsOpen(false); // Close shelf on outside click
           }
         };
     
         if (isOpen) {
-          document.addEventListener("mousedown", handleClickOutside);
+          document.addEventListener("mousedown", handleClickOutside); // Listen for outside clicks
         } else {
-          document.removeEventListener("mousedown", handleClickOutside);
+          document.removeEventListener("mousedown", handleClickOutside); // Stop listening when closed
         }
     
         return () => {
-          document.removeEventListener("mousedown", handleClickOutside);
+          document.removeEventListener("mousedown", handleClickOutside); // Clean up listener
         };
       }, [isOpen]);
 
@@ -46,7 +46,7 @@ const FinanceShelf = () => {
                 {term}
               </div>
               {activeTerm === term && (
-                <div className="term-description">{description}</div>
+                <div className="term-description">{description}</div> // Display term description if active
               )}
             </div>
           ))}
