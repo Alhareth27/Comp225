@@ -1,8 +1,8 @@
-import Papa from 'papaparse';
-import { useEffect, useState } from 'react';
-import { Bar } from 'react-chartjs-2';
-import 'hammerjs';
-import 'chartjs-plugin-zoom';
+import Papa from 'papaparse'; // Importing Papa library for parsing CSV data
+import { useEffect, useState } from 'react'; // Importing React hooks for managing component state
+import { Bar } from 'react-chartjs-2'; // Importing Bar component from react-chartjs-2 library
+import 'hammerjs'; // Importing Hammer.js library for touch support
+import 'chartjs-plugin-zoom'; // Importing Chart.js zoom plugin
 
 import {
     Chart as ChartJS,
@@ -12,8 +12,9 @@ import {
     Title,
     Tooltip,
     Legend,
-} from 'chart.js';
+} from 'chart.js'; // Importing necessary Chart.js components
 
+// Registering Chart.js components
 ChartJS.register(
     CategoryScale,
     LinearScale,
@@ -23,12 +24,14 @@ ChartJS.register(
     Legend,
 );
 
+// Defining StockChart functional component with props graphData
 function StockChart({ graphData }) {
-    const [chartData, setChartData] = useState({
+    const [chartData, setChartData] = useState({ // State for chart data
         datasets: []
     });
-    const [chartOptions, setChartOptions] = useState({});
+    const [chartOptions, setChartOptions] = useState({}); // State for chart options
 
+    // Effect hook to parse CSV data and update chart
     useEffect(() => {
         Papa.parse(graphData, {
             download: true,
@@ -36,8 +39,8 @@ function StockChart({ graphData }) {
             dynamicTyping: true,
             complete: (result) => {
                 console.log(result);
-                const labels = result.data.map(item => item.Date.trim());
-                const data = result.data.map(item => ({
+                const labels = result.data.map(item => item.Date.trim()); // Extracting date labels
+                const data = result.data.map(item => ({ // Processing data points
                     x: item.Date.trim(),
                     y: +item.Close.toFixed(2) || 0,
                     open: item.Open.toFixed(2),
@@ -48,6 +51,7 @@ function StockChart({ graphData }) {
                     volume: item.Volume
                 }));
 
+                // Updating chart data and options
                 setChartData({
                     labels: labels,
                     datasets: [
@@ -118,15 +122,16 @@ function StockChart({ graphData }) {
 
             },
         });
-    }, [graphData]);
+    }, [graphData]); // Dependency array to re-run effect when graphData changes
 
+    // Rendering JSX for StockChart component
     return (
         <div>
             <h1>Stock Chart</h1>
             {
                 chartData.datasets.length > 0 ? (
                     <div>
-                        <Bar options={chartOptions} data={chartData} />
+                        <Bar options={chartOptions} data={chartData} /> {/* Rendering Bar chart */}
                     </div>
                 ) :
                     <div>
@@ -138,4 +143,4 @@ function StockChart({ graphData }) {
 
 }
 
-export default StockChart;
+export default StockChart; // Exporting StockChart component
