@@ -10,7 +10,7 @@ const Quiz = ({currentQuestionIndex, advanceToNextQuestion, questions, score, se
   const handleOptionSelect = (option) => {
     setSelectedOption(option);
     setExplanationShown(true);
-    if( isOptionCorrect (option) ){
+    if( isOptionCorrect (option)){
       setScore(score + 20);; 
     }
   };
@@ -25,6 +25,7 @@ const Quiz = ({currentQuestionIndex, advanceToNextQuestion, questions, score, se
     setExplanationShown(false); 
     advanceToNextQuestion();
   };
+
 
   return (
     <div className="quiz-container">

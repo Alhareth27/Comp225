@@ -47,16 +47,16 @@ body {
   bottom: 110%;
 }
 .option-button {
-  color: #0F3B5F;
+  color: #454545;
   position: relative; 
 }
 
-.check-icon,
-.times-icon {
-  position: absolute; 
-  top: 50%; 
-  transform: translateY(-50%); 
-  font-size: 1.5em; 
+.check-icon {
+  position: absolute;
+  top: 60%;
+  left: calc(100% - 30px); /* move it slightly right outside the option button */
+  transform: translateY(-50%);
+  font-size: 1.5em;
 }
 
 code {

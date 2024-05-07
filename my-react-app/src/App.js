@@ -11,7 +11,6 @@ import Days from "./Days.json"
 import AppleData from './components/StockChart/AAPL201020.csv';
 
 
-
 function App() {
   const [quizStarted, setQuizStarted] = useState(false);
   const [currentQuiz, setcurrentQuiz] = useState(Days[0]);  // TODO: replace this with dynamic calculation from today's date
@@ -19,6 +18,7 @@ function App() {
   const [remainingTime, setRemainingTime] = useState(0);
   const [lastDayCompleted, setLastDayCompleted] = useState(null);
   const [score, setScore] = useState(0); // Added score state here
+
 
 
   const advanceToNextQuestion = () => {
@@ -30,14 +30,7 @@ function App() {
     }
   };
 
-   // Define an array of graph components for easy indexing
-  //  const graphs = [
-  //   <RetEarTable graphData={Days[0].graph.data} />,
-  //   <IncomeStmtTable key={currentGraphIndex} />,
-  //   <StmtOpsTable key={currentGraphIndex} />,
-  //   <StockChart key={currentGraphIndex}/>
-  // ];
- 
+
   useEffect(() => {
     // Get today's date
     const today = new Date();
@@ -47,6 +40,7 @@ function App() {
     const todayDay = Days[indexofDay];
     setcurrentQuiz(todayDay);
   });
+
 
   useEffect(() => {
     const calcRemainingTime = () => {
@@ -60,11 +54,10 @@ function App() {
     const interval = setInterval(calcRemainingTime, 1000);
     calcRemainingTime();
 
+
     return () => clearInterval(interval);
   }, []);
-
  
-
   const formatTimeLeft = (timeLeft) => {
     const hours = Math.floor(timeLeft / (1000 * 60 * 60));
     const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
@@ -72,31 +65,13 @@ function App() {
     return `${hours} hours, ${minutes} minutes, and ${seconds} seconds`;
   };
    
-  
-
-  // useEffect(() => {
-  //   // const checkMidnight = () => {
-  //   //   const now = new Date();
-  //   //   const hours = now.getHours();
-  //   //   const minutes = now.getMinutes();
-  //   //   const seconds = now.getSeconds();
-  //   //   if (hours === 0 && minutes === 0 && seconds < 5) { // Checks within the first 5 seconds after midnight
-  //   //     setCurrentGraphIndex(prevIndex => (prevIndex + 1) % graphs.length);
-  //   //   }
-  //   // };
-  //   // const intervalId = setInterval(checkMidnight, 1000); // Check every second
-
-  //   // return () => clearInterval(intervalId); // Cleanup on component unmount
-  //   const now = new Date();
-  //   const date = now.getDate();
-  // }, []);
 
   const handleStartQuiz = () => {
     setQuizStarted(true);
   };
-  // const manualChangeGraph = () => {
-  //   setCurrentGraphIndex((prevIndex) => (prevIndex + 1) % graphs.length);
-  // };
+
+
+  
   return (
     <div className="App">
       <FinanceShelf />
@@ -122,17 +97,18 @@ function App() {
                   questions = {currentQuiz.questions}
                   score={score}
                   setScore={setScore}
-                />
+                  />
               </>
             ) : (
             <TimerScreen onStartQuiz={handleStartQuiz} />
-            )
+            ) 
           }
         </div>
       </div> 
     </div>
   );
 }
+
 
 function renderGraph(graph) {
   if (graph.type == "RetEarnTable"){
@@ -149,5 +125,5 @@ function renderGraph(graph) {
   }
 }
 
-export default App;
 
+export default App;
