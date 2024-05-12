@@ -1,0 +1,55 @@
+[
+    {
+        "question": "What is the closing price?",
+        "options": [
+          "The last price at which the stock is traded on a regular trading day",
+          "The last price at which the stock is ever traded",
+          "The highest price a stock reaches during the trading day",
+          "The price at which a stock begins trading at the start of the trading day"
+        ],
+        "correctAnswer": "The last price at which the stock is traded on a regular trading day",
+        "explanation": "The closing price is the final price at which a stock is traded during a regular trading day, reflecting the market's final consensus of value for that day.",
+        "hint": "Think of it as the last recorded trade before the market closes."
+      },
+      {
+        "question": "What information does the high price of a stock on a given day tell us?",
+        "options": [
+          "It indicates the starting price of the stock for the day",
+          "It represents the lowest price point of the stock for that day",
+          "It shows the highest price that the stock reached during the trading day",
+          "It is the final trading price of the stock for the day"
+        ],
+        "correctAnswer": "It shows the highest price that the stock reached during the trading day",
+        "explanation": "The high price is the peak trading price of the stock for the day, indicating the maximum value investors paid during the trading session.",
+        "hint": "This price point can reflect investor enthusiasm and market demand at its peak."
+      },
+      {
+        "question": "What is the difference between the opening price on 2010/01/01 and 2020/11/01?",
+        "options": ["140.50", "100.89", "113.39", "95.8"],
+        "correctAnswer": "113.39",
+        "explanation": "The difference of 113.39 between the opening prices on these dates indicates the change in stock price at the start of the trading day over a decade.",
+        "hint": "This question looks at the long-term change in value right at the market's opening."
+      },
+      {
+        "question": "Why is the 'Volume' important in a stock over time chart?",
+        "options": [
+          "It shows the total money value of the stock traded",
+          "It indicates the number of shares traded during a given day, which shows the stock's liquidity and activity level",
+          "It represents the opening price of the stock",
+          "It is the adjusted closing price of the stock after market close"
+        ],
+        "correctAnswer": "It indicates the number of shares traded during a given day, which shows the stock's liquidity and activity level",
+        "explanation": "Volume is crucial as it reflects the activity level and liquidity of the stock, helping investors gauge interest and potential price movement.",
+        "hint": "Higher trading volumes often suggest strong interest and can lead to more significant price movement."      },
+      {
+        "question": "What does 'Adjusted Close' represent on a stock chart?",
+        "options": [
+          "The price of the stock is adjusted for dividends and splits after the market closes",
+          "The unmodified closing price of the stock",
+          "The average price of the stock throughout the trading day",
+          "The total volume of the stock traded during the day"
+        ],
+        "correctAnswer": "The price of the stock is adjusted for dividends and splits after the market closes",
+        "explanation": "Adjusted Close provides a more accurate reflection of a stock's value after accounting for dividends and splits, offering a clearer picture of its historical performance.",
+        "hint": "This measure helps investors compare the stock's closing price over time without the skew of distributions or structural changes."      }
+]

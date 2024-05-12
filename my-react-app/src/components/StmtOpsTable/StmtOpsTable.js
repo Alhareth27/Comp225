@@ -1,10 +1,9 @@
 import React from 'react';
-import sooData from './SOO.json'; 
 import './StmtOpsTable.css';
 import { Tooltip } from '../Tooltip/Tooltip';
 
-function ConsolidatedStatementsTable() {
-  const { title, subtitle, columns, rows } = sooData;
+function ConsolidatedStatementsTable( {graphData}) {
+  const { title, subtitle, columns, rows } = graphData;
 
   const renderRow = (row, isChild = false) => (
     <tr key={row.label}>

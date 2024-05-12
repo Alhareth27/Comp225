@@ -1,0 +1,498 @@
+[
+    {
+        "Day" : 1,
+        "graph":  {
+            "type": "RetEarnTable",
+            "data": { 
+                "title": "Consolidated Statements of Retained Earnings",
+                "subtitle": "(In millions of $)",
+                "columns": [
+                  "Two years ending September 27, 2014"
+                ],
+                "rows": [
+                  {
+                    "label": "Retained Earnings",
+                    "values": ["$ 42,965"],
+                    "details": "Retained earnings are the amount of profit a company has left over after paying all its direct costs, indirect costs, income taxes and its dividends to shareholders. "
+                  },
+                  {
+                    "label": "Net Income attributable to the company year ended Sep 28, 2013",
+                    "values": ["6,136"],
+                    "details": "This value is taken from the income statement. The 4 financial statements are connected to each other!"
+                  },
+                  {
+                    "label": "Dividends declared, year ended Sep 28, 2013",
+                    "values": ["(1,342)"],
+                    "details": "A dividend declared is the fraction of earnings that the board of directors of a company decides to distribute as dividends to its shareholders in exchange for their investment in the form of stock purchases."
+                  },
+                  {
+                    "label": "Other reductions, year ended Sep 28, 2013",
+                    "values": ["(1)"]
+                  },
+                  {
+                    "label": "Retained earnings, Sep 28, 2013",
+                    "values": ["47,758"]
+                  },
+                  {
+                    "label": "Net Income attributable to the company year ended Sep 27, 2014",
+                    "values": ["7,501"]
+                  },
+                  {
+                    "label": "Dividends declared, year ended Sep 27, 2014",
+                    "values": ["(1,525"]
+                  }, 
+                  {
+                    "label": "Retained earnings, Sep 27, 2014",
+                    "values": ["53, 735"]
+                  }
+                ]
+              
+               }
+        },
+        "questions": [
+            {
+                "question": "What are 'Retained Earnings' as shown on the financial statement?",
+                "options": [
+                  "The total revenue of the company.",
+                  "The amount of net income reinvested in the company, rather than distributed to shareholders as dividends.",
+                  "The cumulative profits of the company since inception.",
+                  "The total amount of dividends paid to shareholders over the years."
+                ],
+                "correctAnswer": "The amount of net income reinvested in the company, rather than distributed to shareholders as dividends.",
+                "explanation": "Retained earnings represent the net income kept in the company to fund growth, expansion, or other initiatives, rather than being distributed to shareholders.",
+                "hint": "Think of it as the money that stays with the company for future growth or projects, instead of going out as dividends.",
+                "graphIndex": 0
+              },
+              {
+                "question": "What does a positive Net Income figure indicate about a company?",
+                "options": [
+                  "The company incurred a loss.",
+                  "The company has a strong sales performance.",
+                  "The company generated more revenue than expenses during the period.",
+                  "The company has increased its stock price."
+                ],
+                "correctAnswer": "The company generated more revenue than expenses during the period.",
+                "explanation": "Net income reflects a company's profit after all expenses, indicating its ability to generate more revenue than it spends.",
+                "hint": "This figure shows whether the company is making or losing money after all costs have been accounted for.",
+                "graphIndex": 0
+              },
+              {
+                "question": "How is the change in Retained Earnings from one year to the next calculated?",
+                "options": [
+                  "Adding net income and subtracting dividends declared.",
+                  "Subtracting dividends declared from net income.",
+                  "Adding dividends declared to the previous year's retained earnings.",
+                  "Subtracting net income from dividends declared."
+                ],
+                "correctAnswer": "Adding net income and subtracting dividends declared.",
+                "explanation": "The change in retained earnings is calculated by adding net income and subtracting any dividends declared, showing how much profit is reinvested into the company.",
+                "hint": "Consider how profits and dividends impact the amount of earnings retained by the company.",
+                "graphIndex": 0
+              },
+              {
+                "question": "Why might an investor be interested in the 'Dividends declared' figure?",
+                "options": [
+                  "It indicates the company's revenue growth.",
+                  "It represents the profit generated from sales.",
+                  "It shows the amount of profits the company is returning to shareholders.",
+                  "It reflects the company's total assets."
+                ],
+                "correctAnswer": "It shows the amount of profits the company is returning to shareholders.",
+                "explanation": "Dividends declared reveal how much profit the company is distributing back to shareholders, which can indicate its financial stability and ability to reward its investors.",
+                "hint": "Dividends reflect the company's willingness and ability to share profits with its investors.",
+                "graphIndex": 0
+              },
+              {
+                "question": "If a company has a consistent record of positive retained earnings, what might this suggest?",
+                "options": [
+                  "The company regularly incurs losses.",
+                  "The company may be retaining profits for reinvestment in business growth.",
+                  "The company has decreasing assets.",
+                  "The company's stock is underperforming."
+                ],
+                "correctAnswer": "The company may be retaining profits for reinvestment in business growth.",
+                "explanation": "A consistent record of positive retained earnings suggests that the company is reinvesting profits into its operations, which may signal growth potential and business expansion.",
+                "hint": "Positive retained earnings show how much profit is kept for internal use, which can hint at potential future growth.",
+                "graphIndex": 0
+              }
+        ]
+    },
+
+    {
+      "Day" : 2,
+      "graph":  {
+          "type": "StmtOpsTable",
+          "data": {
+            "title": "CONSOLIDATED STATEMENTS OF OPERATIONS",
+            "subtitle": "(In millions, except number of shares which are reflected in thousands and per share amounts)",
+            "columns": [
+              "September 26, 2015",
+              "September 27, 2014"
+            ],
+            "rows": [
+              {
+                "label": "Net sales",
+                "values": ["233,715", "182,795"],
+                "details": "The total amount of money received from selling goods and services before any costs are deducted"
+              },
+              {
+                "label": "Cost of sales",
+                "values": ["140,089", "112,258"],
+                "details": "The direct costs attributed to the production of the goods sold, including materials and labor"
+              },
+              {
+                "label": "Gross margin",
+                "values": ["93,626", "70,537"],
+                "details": "The profit a company makes after subtracting the costs associated with making and selling its products, but before subtracting overhead or payroll costs"
+              },
+              {
+                "label": "Operating expenses",
+                "children": [
+                  {
+                    "label": "Research and development",
+                    "values": ["8,067", "6,041"],
+                    "details": "Money spent on researching and developing new products or services to drive future growth"
+                  },
+                  {
+                    "label": "Selling, general and administrative",
+                    "values": ["14,329", "11,993"],
+                    "details": "The sum of all direct and indirect selling expenses and all general and administrative expenses of a company"
+                  }
+                ]
+              },
+              {
+                "label": "Total operating expenses",
+                "values": ["22,396", "18,034"],
+                "details": "The combined total of all expenses necessary to run the business, excluding the cost of sales but including R&D and SG&A"
+              },
+              {
+                "label": "Operating income",
+                "values": ["71,230", "52,503"],
+                "details": "The profit realized from a business's operations after subtracting operating expenses from the gross margin"
+              },
+              {
+                "label": "Other income/(expense), net",
+                "values": ["1,285", "980"],
+                "details": "Revenue or expenses that come from non-operational activities, like interest earned or paid, investments, and other non-regular business activities"
+              },
+              {
+                "label": "Income before provision for income taxes",
+                "values": ["72,515", "53,483"],
+                "details": "The amount of income a company has earned before taxes have been taken out"
+              },
+              {
+                "label": "Provision for income taxes",
+                "values": ["19,121", "13,973"],
+                "details": "The amount of income taxes a company expects to pay for the current year and may also include past taxes that are due"
+              },
+              {
+                "label": "Net income",
+                "values": ["53,394", "39,510"],
+                "details": "The total profit of a company after all expenses, including taxes, have been subtracted from net sales"
+              },
+              {
+                "label": "Earnings per share",
+                "children": [
+                  {
+                    "label": "Basic",
+                    "values": ["9.28", "6.49"],
+                    "details": "The portion of a company's profit allocated to each outstanding share of common stock, without accounting for potential dilution from things like convertible securities"
+                  },
+                  {
+                    "label": "Diluted",
+                    "values": ["9.22", "6.45"],
+                    "details": "The portion of a company's profit allocated to each share of stock if all convertible securities were exercised"
+                  }
+                ]
+              },
+              {
+                "label": "Shares used in computing earnings per share",
+                "details": "The average number of shares outstanding during a reporting period, used to calculate basic or diluted earnings per share",
+                "children": [
+                  {
+                    "label": "Basic",
+                    "values": ["5,753,421", "6,085,572"]
+                  },
+                  {
+                    "label": "Diluted",
+                    "values": ["5,793,069", "6,122,663"]
+                  }
+                ]
+              },
+              {
+                "label": "Cash dividends declared per share",
+                "values": ["1.98", "1.82"],
+                "details": "The amount of cash paid out to shareholders per share from the company's earnings"
+              }
+            ]
+          }
+          
+      },
+      "questions":[
+        {
+        "question": "Why is 'Cost of Sales' important to investors?",
+        "options": [
+          "It shows the dividends paid to shareholders.",
+          "It indicates the efficiency of production and the direct costs involved in creating the company's products.",
+          "It reveals the company's net profit.",
+          "It displays the amount spent on research and development."
+        ],
+        "correctAnswer": "It indicates the efficiency of production and the direct costs involved in creating the company's products.",
+        "explanation": "Cost of Sales is crucial as it helps investors understand the direct costs involved in producing the goods the company sells, indicating the efficiency and profitability of production processes.",
+        "hint": "Focus on the relationship between production costs and product pricing.",
+        "graphIndex": 2
+      },
+      {
+        "question": "What can 'Operating Expenses' tell us about a company?",
+        "options": [
+          "The revenue generated from the main business activities.",
+          "The investment income of the company.",
+          "The amount of taxes the company has to pay.",
+          "The costs of running the main business, excluding the cost of sales."
+        ],
+        "correctAnswer": "The costs of running the main business, excluding the cost of sales.",
+        "explanation": "Operating Expenses provide insight into the day-to-day costs of running a company's core business operations, which are separate from the direct costs of producing goods or services.",
+        "hint": "Consider what expenses are necessary to keep the business operational aside from producing products.",
+        "graphIndex": 2
+      },
+      {
+        "question": "If an investor owned 1,000 shares, how much in total cash dividends would they have received in 2015?",
+        "options": [
+          "$1,820",
+          "$1,980",
+          "$2,000",
+          "$1,900"
+        ],
+        "correctAnswer": "$1,980",
+        "explanation": "The total cash dividends received would be calculated by multiplying the number of shares owned by the cash dividends declared per share for 2015.",
+        "hint": "Multiply the number of shares by the dividend rate to find the total dividends.",
+        "graphIndex": 2
+      },
+      {
+        "question": "What does 'Earnings Per Share' tell an investor?",
+        "options": [
+          "The total shares available in the market.",
+          "The company's share price on the stock market.",
+          "The amount of profit for each share of the company's stock, indicating the company's ability to generate profits.",
+          "The number of shares that were sold during the financial year."
+        ],
+        "correctAnswer": "The amount of profit for each share of the company's stock, indicating the company's ability to generate profits.",
+        "explanation": "'Earnings Per Share' is a key indicator of a company's profitability, showing how much profit is earned for each share of stock, which can signal the company's financial health to investors.",
+        "hint": "Think of how the profitability per share can influence an investor's perception of the company's value.",
+        "graphIndex": 2
+      },
+      {
+        "question": "What is the difference in Earnings Per Share (Basic) from 2014 to 2015?",
+        "options": [
+          "$2.79",
+          "$2.82",
+          "$2.98",
+          "$3.45"
+        ],
+        "correctAnswer": "$2.79",
+        "explanation": "The difference in Earnings Per Share (Basic) reflects the change in profitability per share over the year, which can be an indicator of the company's growing or shrinking profitability to investors.",
+        "hint": "Calculate the difference between the two years' EPS to observe the trend in profitability.",
+        "graphIndex": 2
+      }
+      ]
+      
+
+    },
+    {
+      "Day" : 3,
+        "graph":  {
+            "type": "IncomeStmtTable",
+            "data": {
+              "title": "Consolidated Statements of Income",
+              "subtitle": "(In millions of $)",
+              "columns": [
+                "September 27, 2014",
+                "September 28, 2013"
+              ],
+              "rows": [
+                {
+                  "label": "Services Revenue",
+                  "values": ["$ 40,246", "$ 37,280"],
+                  "details": "The income a company receives for performing a service"
+                },
+                {
+                  "label": "Products Revenue",
+                  "values": ["8,567", "7,761"],
+                  "details": "Total amount of income an individual product generates"
+                },
+                {
+                  "label": "Total Revenues",
+                  "values": ["48,813", "45,051"]
+                },
+                {
+                  "label": "Cost of Services (exclusive of depreciation and ammortization)",
+                  "values": ["(21,356)", "(20,090)"]
+                },
+                {
+                  "label": "Cost of Products (exclusive of depreciation and ammortization)",
+                  "values": ["(5,064)", "(4,944)"]
+                },
+                {
+                  "label": "Selling, General, Administrative & Other",
+                  "values": ["(8,565)", "(8,365)"]
+                },
+                {
+                  "label": "Depreciation and Amortization",
+                  "values": ["(2,288)", "(2,192)"],
+                  "details": "Depreciation is the amount of asset value lost over time. Amortization is a method for decreasing an asset cost over a period of time."
+                },
+                {
+                  "label": "Total Costs and Expenses",
+                  "values": ["(37,273)", "(35,591)"]
+                },
+                {
+                  "label": "Net Income",
+                  "values": ["11,540", "9,450"],
+                  "details": "Net income is what a business or individual makes after taxes, deductions, and other expenses are taken out"
+                }
+              ]
+            }
+    },  "questions":
+      [
+        {
+            "question": "How much did the Products Revenue increase from September 28, 2013 to September 27, 2014?",
+            "options": [
+              "806",
+              "985",
+              "1013",
+              "876"
+            ],
+            "correctAnswer": "806",
+            "explanation": "The increase in Products Revenue from September 28, 2013 to September 27, 2014 was 806 million dollars, indicating growth in product sales over the year.",
+            "hint": "Calculate the difference between the Products Revenue for the two years to find the increase.",
+            "graphIndex": 1
+          },
+          {
+            "question": "What is the formula for calculating Net Income?",
+            "options": [
+              "Expenses - Revenue",
+              "Service Revenue - Cost of Services",
+              "Total Revenue - Total Expenses",
+              "Products Revenue - Cost of Products"
+            ],
+            "correctAnswer": "Total Revenue - Total Expenses",
+            "explanation": "Net Income is calculated by subtracting Total Expenses from Total Revenue, providing a measure of the company's profitability after all costs have been accounted for.",
+            "hint": "Think of Net Income as the bottom line of a company's income statement.",
+            "graphIndex": 1
+          },
+          {
+            "question": "What would net income be if Total Costs and Expenses for September 2014 were 38,000 instead?",
+            "options": [
+              "10,200",
+              "10,813",
+              "11,450",
+              "9,600"
+            ],
+            "correctAnswer": "10,813",
+            "explanation": "With Total Costs and Expenses at 38,000, the calculation for Net Income would show a profit of 10,813, assuming total revenues remain constant.",
+            "hint": "Subtract the hypothetical Total Costs and Expenses from the reported Total Revenues to find the adjusted Net Income.",
+            "graphIndex": 1
+          },
+          {
+            "question": "What does the statement of Income tell us?",
+            "options": [
+              "The assets, liabilities of a company at a specific point in time.",
+              "The revenue, expenses, and profit or loss of a company over a specific period.",
+              "The cash inflows and outflows from operating, investing, and financing activities.",
+              "The inventory levels and production costs associated with a company's operations."
+            ],
+            "correctAnswer": "The revenue, expenses, and profit or loss of a company over a specific period.",
+            "explanation": "The statement of Income provides a financial summary of a company's operational performance in terms of revenue, expenses, and net profit or loss over a defined period.",
+            "hint": "This financial statement is like a financial snapshot of a company's operating performance for a specific period.",
+            "graphIndex": 1
+          },
+          {
+            "question": "Should you invest in a company ONLY because it has a positive net income value?",
+            "options": [
+              "Yes, because a positive net income indicates a company is profitable and a safe investment.",
+              "Yes, because net income is the only indicator necessary to assess the financial health of a company.",
+              "No, because net income is calculated before dividends and may not reflect actual cash available to shareholders.",
+              "No, because a positive net income does not reflect other important factors like market conditions, debt levels, and future growth potential."
+            ],
+            "correctAnswer": "No, because a positive net income does not reflect other important factors like market conditions, debt levels, and future growth potential.",
+            "explanation": "While a positive net income is a good indicator of profitability, it should not be the sole factor in investment decisions as it doesn't account for other vital aspects such as debt, market conditions, and growth prospects.",
+            "hint": "Consider a holistic view of a company's financial and strategic position before investing, rather than focusing solely on net income.",
+            "graphIndex": 1
+          }
+    ]
+  }, 
+  {
+    "Day" : 4,
+      "graph":  {
+          "type": "StockChart",
+          "data": {
+            
+          }
+  },  "questions":
+    [
+      {
+        "question": "What is the closing price?",
+        "options": [
+          "The last price at which the stock is traded on a regular trading day",
+          "The last price at which the stock is ever traded",
+          "The highest price a stock reaches during the trading day",
+          "The price at which a stock begins trading at the start of the trading day"
+        ],
+        "correctAnswer": "The last price at which the stock is traded on a regular trading day",
+        "explanation": "The closing price is the final price at which a stock is traded during a regular trading day, reflecting the market's final consensus of value for that day.",
+        "hint": "Think of it as the last recorded trade before the market closes.",
+        "graphIndex": 3
+      },
+      {
+        "question": "What information does the high price of a stock on a given day tell us?",
+        "options": [
+          "It indicates the starting price of the stock for the day",
+          "It represents the lowest price point of the stock for that day",
+          "It shows the highest price that the stock reached during the trading day",
+          "It is the final trading price of the stock for the day"
+        ],
+        "correctAnswer": "It shows the highest price that the stock reached during the trading day",
+        "explanation": "The high price is the peak trading price of the stock for the day, indicating the maximum value investors paid during the trading session.",
+        "hint": "This price point can reflect investor enthusiasm and market demand at its peak.",
+        "graphIndex": 3
+      },
+      {
+        "question": "What is the difference between the opening price on 2010/01/01 and 2020/11/01?",
+        "options": ["140.50", "100.89", "113.39", "95.8"],
+        "correctAnswer": "113.39",
+        "explanation": "The difference of 113.39 between the opening prices on these dates indicates the change in stock price at the start of the trading day over a decade.",
+        "hint": "This question looks at the long-term change in value right at the market's opening.",
+        "graphIndex": 3
+      },
+      {
+        "question": "Why is the 'Volume' important in a stock over time chart?",
+        "options": [
+          "It shows the total money value of the stock traded",
+          "It indicates the number of shares traded during a given day, which shows the stock's liquidity and activity level",
+          "It represents the opening price of the stock",
+          "It is the adjusted closing price of the stock after market close"
+        ],
+        "correctAnswer": "It indicates the number of shares traded during a given day, which shows the stock's liquidity and activity level",
+        "explanation": "Volume is crucial as it reflects the activity level and liquidity of the stock, helping investors gauge interest and potential price movement.",
+        "hint": "Higher trading volumes often suggest strong interest and can lead to more significant price movement.",
+        "graphIndex": 3
+      },
+      {
+        "question": "What does 'Adjusted Close' represent on a stock chart?",
+        "options": [
+          "The price of the stock is adjusted for dividends and splits after the market closes",
+          "The unmodified closing price of the stock",
+          "The average price of the stock throughout the trading day",
+          "The total volume of the stock traded during the day"
+        ],
+        "correctAnswer": "The price of the stock is adjusted for dividends and splits after the market closes",
+        "explanation": "Adjusted Close provides a more accurate reflection of a stock's value after accounting for dividends and splits, offering a clearer picture of its historical performance.",
+        "hint": "This measure helps investors compare the stock's closing price over time without the skew of distributions or structural changes.",
+        "graphIndex": 3
+      }
+  ]
+}
+
+]
+
+   

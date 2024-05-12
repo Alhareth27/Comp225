@@ -1,47 +1,45 @@
-import AppleData from './AAPL201020.csv';
 import Papa from 'papaparse';
 import { useEffect, useState } from 'react';
-import {Bar} from 'react-chartjs-2'; 
+import { Bar } from 'react-chartjs-2';
 import 'hammerjs';
 import 'chartjs-plugin-zoom';
 
-
 import {
-    Chart as ChartJS, 
+    Chart as ChartJS,
     CategoryScale,
     LinearScale,
     BarElement,
     Title,
-    Tooltip, 
+    Tooltip,
     Legend,
 } from 'chart.js';
 
 ChartJS.register(
     CategoryScale,
     LinearScale,
-    BarElement, 
+    BarElement,
     Title,
-    Tooltip, 
+    Tooltip,
     Legend,
-)
+);
 
-function StockChart () {
-    const[chartData, setChartData] = useState({
+function StockChart({ graphData }) {
+    const [chartData, setChartData] = useState({
         datasets: []
     });
-    const[chartOptions, setChartOptions] = useState({})
+    const [chartOptions, setChartOptions] = useState({});
 
     useEffect(() => {
-        Papa.parse(AppleData, {
-            download: true, 
+        Papa.parse(graphData, {
+            download: true,
             header: true,
-            dynamicTyping: true, 
+            dynamicTyping: true,
             complete: (result) => {
                 console.log(result);
-                const labels = result.data.map(item => item.Date.trim()); 
+                const labels = result.data.map(item => item.Date.trim());
                 const data = result.data.map(item => ({
                     x: item.Date.trim(),
-                    y: +item.Close.toFixed(2) || 0, 
+                    y: +item.Close.toFixed(2) || 0,
                     open: item.Open.toFixed(2),
                     high: item.High.toFixed(2),
                     low: item.Low.toFixed(2),
@@ -49,7 +47,7 @@ function StockChart () {
                     adjClose: item['Adj Close'].toFixed(2),
                     volume: item.Volume
                 }));
-                
+
                 setChartData({
                     labels: labels,
                     datasets: [
@@ -73,7 +71,7 @@ function StockChart () {
                         },
                         tooltip: {
                             callbacks: {
-                                beforeLabel: function(context) {
+                                beforeLabel: function (context) {
                                     const dataItem = context.raw;
                                     return [
                                         `Open: ${dataItem.open}`,
@@ -88,17 +86,17 @@ function StockChart () {
                         },
                         zoom: {
                             pan: {
-                                enabled: true, // Enable panning
-                                mode: 'xy', // Panning on both axes
+                                enabled: true,
+                                mode: 'xy',
                             },
                             zoom: {
                                 wheel: {
-                                    enabled: true, // Zooming with mouse wheel
+                                    enabled: true,
                                 },
                                 pinch: {
-                                    enabled: true, // Zooming with pinch gesture
+                                    enabled: true,
                                 },
-                                mode: 'xy', // Zooming on both axes
+                                mode: 'xy',
                             }
                         }
                     },
@@ -117,10 +115,10 @@ function StockChart () {
                         }
                     }
                 });
-                               
-                },
-            });
-        }, []);
+
+            },
+        });
+    }, [graphData]);
 
     return (
         <div>
@@ -128,17 +126,16 @@ function StockChart () {
             {
                 chartData.datasets.length > 0 ? (
                     <div>
-                        <Bar options = {chartOptions} data = {chartData}/>
-                     </div>   
+                        <Bar options={chartOptions} data={chartData} />
+                    </div>
                 ) :
-                <div>
-                    Loading...
-                 </div> 
+                    <div>
+                        Loading...
+                    </div>
             }
         </div>
     )
-    
-}
 
+}
 
 export default StockChart;

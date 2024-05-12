@@ -1,10 +1,9 @@
 import React, { useState, useEffect} from 'react';
 import Option from "../Option/Option";
 import { Tooltip } from '../Tooltip/Tooltip';
-import questions from "./questions.json";
 import "./quiz.css";
 
-const Quiz = ({ currentQuestionIndex, setCurrentQuestionIndex }) => {
+const Quiz = ({currentQuestionIndex, setCurrentQuestionIndex, questions}) => {
   const [selectedOption, setSelectedOption] = useState(null);
   const [explanationShown, setExplanationShown] = useState(false);
   const [lastQuizTime, setLastQuizTime] = useState(null);

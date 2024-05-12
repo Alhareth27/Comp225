@@ -1,10 +1,9 @@
 import React from 'react';
-import sooData from './IncomeStmt.json';
 import './IncomeStmt.css';
 import { Tooltip } from '../Tooltip/Tooltip';
 
-function IncomeStmtTable() {
-  const { title, subtitle, columns, rows } = sooData;
+function IncomeStmtTable({graphData}) {
+  const { title, subtitle, columns, rows } = graphData;
 
   const renderRow = (row, level = 0) => {
     return (
