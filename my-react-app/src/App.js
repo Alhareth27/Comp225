@@ -31,7 +31,7 @@ function App() {
     // Get today's date
     const today = new Date();
     const todayDayOfWeek = today.getDay() + 1; // 4 (for example)
-    const lengthofDays = Days.length; // 4 (for example)
+    const lengthofDays = Days.length + 1; // 4 (for example)
     let indexofDay = todayDayOfWeek % lengthofDays;
     if (indexofDay == 0){
       indexofDay = lengthofDays - 1;
