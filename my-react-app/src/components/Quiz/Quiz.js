@@ -1,54 +1,18 @@
-import React, { useState, useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 import Option from "../Option/Option";
 import { Tooltip } from '../Tooltip/Tooltip';
 import "./quiz.css";
 
-const Quiz = ({currentQuestionIndex, setCurrentQuestionIndex, questions}) => {
+const Quiz = ({currentQuestionIndex, advanceToNextQuestion, questions}) => {
   const [selectedOption, setSelectedOption] = useState(null);
   const [explanationShown, setExplanationShown] = useState(false);
-  const [lastQuizTime, setLastQuizTime] = useState(null);
-  const [quizCompleted, setQuizCompleted] = useState(false);
-  const [remainingTime, setRemainingTime] = useState(0);
   const [score, setScore] = useState(0);
-
-  useEffect(() => {
-    const lastTime = localStorage.getItem('lastQuizTime');
-    if (lastTime) {
-      setLastQuizTime(new Date(lastTime));
-    }
-  }, []);
-
-  useEffect(() => {
-    const calcRemainingTime = () => {
-      const now = new Date();
-      const midnight = new Date(now);
-      midnight.setHours(24, 0, 0, 0);
-      const timeLeft = midnight - now;
-      setRemainingTime(timeLeft);
-    };
-
-    const interval = setInterval(calcRemainingTime, 1000);
-    calcRemainingTime(); 
-
-    return () => clearInterval(interval);
-  }, []);
 
   const handleOptionSelect = (option) => {
     setSelectedOption(option);
     setExplanationShown(true);
-
-    if (isOptionCorrect(option)) {
-      setScore((prevScore) => prevScore + 20);
-    }
-  };
-
-  const handleNextQuestion = () => {
-    if (currentQuestionIndex === questions.length - 1) {
-      setQuizCompleted(true);
-    } else {
-      setCurrentQuestionIndex((prevIndex) => prevIndex + 1);
-      setSelectedOption(null); 
-      setExplanationShown(false); 
+    if( isOptionCorrect (option) ){
+      setScore((prevScore) => prevScore + 20); 
     }
   };
 
@@ -56,49 +20,43 @@ const Quiz = ({currentQuestionIndex, setCurrentQuestionIndex, questions}) => {
     return option === questions[currentQuestionIndex].correctAnswer;
   };
 
-  const formatTimeLeft = (timeLeft) => {
-    const hours = Math.floor(timeLeft / (1000 * 60 * 60));
-    const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
-    const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
-    return `${hours} hours, ${minutes} minutes, and ${seconds} seconds`;
+
+  const handleNextQuestion = () => {
+    setSelectedOption(null); 
+    setExplanationShown(false); 
+    advanceToNextQuestion();
   };
 
   return (
     <div className="quiz-container">
-    {quizCompleted ? (
-      <p>Quiz completed! You scored {score} points. Next quiz available in {formatTimeLeft(remainingTime)}.</p>
-    ) : (
-      <>
-        <div className="question-card">
-          <Tooltip text={questions[currentQuestionIndex].hint}>
-            <p className="question">
-              {questions[currentQuestionIndex].question}
-            </p>
-          </Tooltip>
-          <div>
-            {questions[currentQuestionIndex].options.map((option, index) => (
-              <Option
-                key={index}
-                option={option}
-                isSelected={selectedOption === option}
-                isCorrect={isOptionCorrect(option)}
-                onSelectOption={() => !explanationShown && handleOptionSelect(option)}
-              />
-            ))}
-          </div>
+      <div className="question-card">
+        <Tooltip text={questions[currentQuestionIndex].hint}>
+          <p className="question">
+            {questions[currentQuestionIndex].question}
+          </p>
+        </Tooltip>
+        <div>
+          {questions[currentQuestionIndex].options.map((option, index) => (
+            <Option
+              key={index}
+              option={option}
+              isSelected={selectedOption === option}
+              isCorrect={isOptionCorrect(option)}
+              onSelectOption={() => !explanationShown && handleOptionSelect(option)}
+            />
+          ))}
         </div>
-        {explanationShown && (
-          <>
-            <div className="explanation">{questions[currentQuestionIndex].explanation}</div>
-            <button className="next-button" onClick={handleNextQuestion}>Next</button>
-          </>
-        )}
-      </>
-    )}
-    <div className="progress-display">
+      </div>
+      {explanationShown && (
+        <>
+          <div className="explanation">{questions[currentQuestionIndex].explanation}</div>
+          <button className="next-button" onClick={handleNextQuestion}>Next</button>
+        </>
+      )}
+      <div className="progress-display">
         Questions Answered: {currentQuestionIndex + 1} / {questions.length}
       </div>
-  </div>
+    </div>
   );
 };
 

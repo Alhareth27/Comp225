@@ -12,12 +12,23 @@ import AppleData from './components/StockChart/AAPL201020.csv';
 
 
 
-
-
 function App() {
   const [quizStarted, setQuizStarted] = useState(false);
-  const [currentDay, setCurrentDay] = useState(Days[0]);  // TODO: replace this with dynamic calculation from today's date
+  const [currentQuiz, setcurrentQuiz] = useState(Days[0]);  // TODO: replace this with dynamic calculation from today's date
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
+  const [remainingTime, setRemainingTime] = useState(0);
+  const [lastDayCompleted, setLastDayCompleted] = useState(null);
+  const [score, setScore] = useState(0);
+
+
+  const advanceToNextQuestion = () => {
+    if (currentQuestionIndex === currentQuiz.questions.length - 1) {
+      setLastDayCompleted(currentQuiz.day);
+      setCurrentQuestionIndex(0);
+    } else {
+      setCurrentQuestionIndex((prevIndex) => prevIndex + 1);
+    }
+  };
 
    // Define an array of graph components for easy indexing
   //  const graphs = [
@@ -30,19 +41,38 @@ function App() {
   useEffect(() => {
     // Get today's date
     const today = new Date();
-    const todayDayOfWeek = today.getDay() + 1; // 4 (for example)
-    const lengthofDays = Days.length + 1; // 4 (for example)
+    const todayDayOfWeek = today.getDay(); // 4 (for example)
+    const lengthofDays = Days.length; // 4 (for example)
     let indexofDay = todayDayOfWeek % lengthofDays;
-    if (indexofDay == 0){
-      indexofDay = lengthofDays - 1;
-    }
-    const todayDay = Days.find(day => day.Day === indexofDay);
-    setCurrentDay(todayDay);
+    const todayDay = Days[indexofDay];
+    setcurrentQuiz(todayDay);
+  });
+
+  useEffect(() => {
+    const calcRemainingTime = () => {
+      const now = new Date();
+      const midnight = new Date(now);
+      midnight.setHours(24, 0, 0, 0);
+      const timeLeft = midnight - now;
+      setRemainingTime(timeLeft);
+    };
+
+    const interval = setInterval(calcRemainingTime, 1000);
+    calcRemainingTime();
+
+    return () => clearInterval(interval);
   }, []);
 
+ 
 
-
+  const formatTimeLeft = (timeLeft) => {
+    const hours = Math.floor(timeLeft / (1000 * 60 * 60));
+    const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+    return `${hours} hours, ${minutes} minutes, and ${seconds} seconds`;
+  };
    
+  
 
   // useEffect(() => {
   //   // const checkMidnight = () => {
@@ -76,22 +106,26 @@ function App() {
       <div className="App-content">
         <div className="App-column">
           <div className="Stockchart-section">
-            {renderGraph(currentDay.graph)}
+            {renderGraph(currentQuiz.graph)}
           </div>
         </div>
-        
+          
         <div className="App-column">
-          {quizStarted ? (
-            <>
-              <Quiz 
-                currentQuestionIndex={currentQuestionIndex} 
-                setCurrentQuestionIndex={setCurrentQuestionIndex} 
-                questions = {currentDay.questions}
-              />
-            </>
-          ) : (
+          {
+            (lastDayCompleted === currentQuiz.day) ? (
+              <p>Quiz completed! You scored {(currentQuiz.questions[currentQuestionIndex].correctAnswer) ? score + 20 : score + 0} points. Next quiz available in {formatTimeLeft(remainingTime)}.</p>
+            ) : quizStarted ? (
+              <>
+                <Quiz 
+                  currentQuestionIndex={currentQuestionIndex} 
+                  advanceToNextQuestion={advanceToNextQuestion} 
+                  questions = {currentQuiz.questions}
+                />
+              </>
+            ) : (
             <TimerScreen onStartQuiz={handleStartQuiz} />
-          )}
+            )
+          }
         </div>
       </div> 
     </div>

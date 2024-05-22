@@ -1,6 +1,6 @@
 [
     {
-        "Day" : 1,
+        "day" : 1,
         "graph":  {
             "type": "RetEarnTable",
             "data": { 
@@ -119,7 +119,7 @@
     },
 
     {
-      "Day" : 2,
+      "day" : 2,
       "graph":  {
           "type": "StmtOpsTable",
           "data": {
@@ -299,7 +299,7 @@
 
     },
     {
-      "Day" : 3,
+      "day" : 3,
         "graph":  {
             "type": "IncomeStmtTable",
             "data": {
@@ -422,7 +422,7 @@
     ]
   }, 
   {
-    "Day" : 4,
+    "day" : 4,
       "graph":  {
           "type": "StockChart",
           "data": {
