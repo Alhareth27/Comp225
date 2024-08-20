@@ -1,12 +1,10 @@
 **README**
 
-**Project Overview: 
-**
+**Project Overview:**
 
 This project is a React application designed to provide an interactive experience where users can take quizzes, view financial data, and track their progress over time. The application is structured around daily quizzes that align with specific financial graphs and data representations. It also features a countdown timer that shows the time remaining in the day, which helps users know when they can access the next quiz.
 
-**Features: 
-**
+**Features:**
 
 * Daily Quiz: The app provides a quiz each day, featuring financial questions that users can answer. The quiz is automatically updated based on the current day of the week.
 
@@ -16,8 +14,7 @@ This project is a React application designed to provide an interactive experienc
 
 * Scoring System: Users receive scores for each quiz, and the app tracks the last completed day to ensure that users only take each quiz once per day.
   
-**Components: 
-**
+**Components:**
 
 * App.js: The main entry point of the application, managing the overall state and rendering the main UI components.
 
